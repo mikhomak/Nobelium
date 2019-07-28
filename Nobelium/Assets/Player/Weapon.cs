@@ -6,8 +6,9 @@ public class Weapon : MonoBehaviour
 {
 
     [SerializeField] private Vector3 mousePosition;
-    [SerializeField] private float rotationSpeed;
     [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private float fireRate = 0.01f;
+    [SerializeField] private float fireRateTimer = 0f;
 
     private void FixedUpdate()
     {
@@ -17,13 +18,17 @@ public class Weapon : MonoBehaviour
 
     private void shoot()
     {
-        if(AudioPeer.getFreqBands(2) > 1.2f)
+        if (AudioPeer.getFreqBands(5) > 1.2f)
         {
-            GameObject bulletGO = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
-            Bullet bullet = bulletGO.GetComponent<Bullet>();
-            bulletGO.transform.localScale = new Vector3(1,1,1) * AudioPeer.getFreqBands(5) * 1.2f;
-            bullet.setDirection(transform.up);
+                GameObject bulletGO = Instantiate(bulletPrefab, transform.position, transform.rotation);
+                Bullet bullet = bulletGO.GetComponent<Bullet>();
+                float scale = AudioPeer.getFreqBands(0) > 1 ? AudioPeer.getFreqBands(0) : 1;
+                bulletGO.transform.localScale = new Vector3(1, 1, 1) * scale * 1.2f;
+                bullet.setDirection(transform.up * -1);
+                fireRateTimer = 0f;
         }
+        fireRateTimer += Time.deltaTime;
+
     }
 
 
