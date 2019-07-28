@@ -11,8 +11,6 @@ public class Player : MonoBehaviour
 
     [Header("Stats")]
     [SerializeField] private float speed;
-    [SerializeField] private float jumpForce;
-    [SerializeField] private float fallSpeed;
 
 
     private Rigidbody2D rb2d;
@@ -31,8 +29,6 @@ public class Player : MonoBehaviour
     private void setStats()
     {
         movementComponent.setSpeed(speed);
-        movementComponent.setJumpForce(jumpForce);
-        movementComponent.setFallSpeed(fallSpeed);
     }
 
     private void createComponents()
@@ -42,15 +38,8 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        movementComponent.movement(horInput);
+        movementComponent.movement(horInput, verInput);
     }
-
-
-    public void jump()
-    {
-        movementComponent.jump();
-    }
-
 
     public void setInputs(float horInput, float verInput)
     {

@@ -18,7 +18,6 @@ public class InputController : MonoBehaviour
     private void Update()
     {
         getInputs();
-        jumping();
         player.setInputs(horInput, verInput);
     }
 
@@ -28,11 +27,4 @@ public class InputController : MonoBehaviour
         horInput = Input.GetAxis("Horizontal");
         verInput = Input.GetAxis("Vertical");
     }
-
-    private void jumping()
-    {
-        if (Input.GetButtonDown("Jump"))
-            player.jump();
-    }
-
 }
