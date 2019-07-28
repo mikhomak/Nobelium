@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
 
     [Header("Stats")]
     [SerializeField] private float speed;
+    [SerializeField] private float jumpForce;
 
 
     private Rigidbody2D rb2d;
@@ -23,6 +24,13 @@ public class Player : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
         createComponents();
+        setStats();
+    }
+
+    private void setStats()
+    {
+        movementComponent.setSpeed(speed);
+        movementComponent.setJumpForce(jumpForce);
     }
 
     private void createComponents()
@@ -34,6 +42,13 @@ public class Player : MonoBehaviour
     {
         movementComponent.movement(horInput);
     }
+
+
+    public void jump()
+    {
+        movementComponent.jump();
+    }
+
 
     public void setInputs(float horInput, float verInput)
     {
