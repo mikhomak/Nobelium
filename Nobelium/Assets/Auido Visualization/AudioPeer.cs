@@ -6,12 +6,13 @@ using UnityEngine;
 [RequireComponent (typeof (AudioSource))]
 public class AudioPeer : MonoBehaviour
 {
-    [SerializeField] private static float[] freqBrands = new float[8];
+    [SerializeField] private static float[] freqBand = new float[8];
     [SerializeField] private static float[] samples = new float[512];
     private AudioSource audioSource;
 
 
     public static float getSample(int i) { return samples[i]; }
+    public static float getFreqBands(int i) { return freqBand[i]; }
 
     private void Start()
     {
@@ -21,6 +22,7 @@ public class AudioPeer : MonoBehaviour
     private void Update()
     {
         getSpectrumAudioSource();
+        updateFrequencyBrands();
     }
 
     private void getSpectrumAudioSource()
@@ -28,7 +30,7 @@ public class AudioPeer : MonoBehaviour
         audioSource.GetSpectrumData(samples,0,FFTWindow.Blackman);
     }
 
-    private void createFrequencyBrands()
+    private void updateFrequencyBrands()
     {
         int count = 0;
         for(int i =0; i < 8; i++)
@@ -43,7 +45,7 @@ public class AudioPeer : MonoBehaviour
                 count++;
             }
             average /= count;
-            freqBrands[i] = average * 10;
+            freqBand[i] = average * 10;
         }
     }
 
