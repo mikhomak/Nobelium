@@ -5,11 +5,14 @@ using UnityEngine;
 public class HealthComponent : MonoBehaviour
 {
     private float health = 100f;
-    private float damage = 10f;
 
-    private void takeDamage(float health)
+    private void takeDamage(float health, float damage)
     {
         health -= damage;
+        if (health <= 0)
+        {
+            die();
+        }
     }
 
     private void die()
