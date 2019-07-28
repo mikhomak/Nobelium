@@ -127,6 +127,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mousePosition: {x: 0, y: 0, z: 0}
   rotationSpeed: 5
+  bulletPrefab: {fileID: 7036385349358025861, guid: 75441078c3327454694553d83c29cb3f,
+    type: 3}
 --- !u!1 &7102872922741129627
 GameObject:
   m_ObjectHideFlags: 0
