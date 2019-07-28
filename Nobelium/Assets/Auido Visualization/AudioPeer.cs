@@ -7,8 +7,11 @@ using UnityEngine;
 public class AudioPeer : MonoBehaviour
 {
 
-    [SerializeField] private float[] samples = new float[512];
+    [SerializeField] private static float[] samples = new float[512];
     private AudioSource audioSource;
+
+
+    public static float getSample(int i) { return samples[i]; }
 
     private void Start()
     {
