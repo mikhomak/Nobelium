@@ -153,6 +153,7 @@ MonoBehaviour:
   verInput: 0
   speed: 5
   jumpForce: 150
+  fallSpeed: 3
 --- !u!114 &7565378619069893904
 MonoBehaviour:
   m_ObjectHideFlags: 0
