@@ -15,9 +15,11 @@ public class Bullet : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
         movementComponent = new MovementComponent(rb2d);
+        movementComponent.setSpeed(speed);
     }
 
-    void Update()
+    void FixedUpdate()
     {
+        movementComponent.movement(direction.x, direction.y);
     }
 }
