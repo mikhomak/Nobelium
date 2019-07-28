@@ -17,6 +17,7 @@ public class InputController : MonoBehaviour
 
     private void Update()
     {
+        getInputs();
         player.setInputs(horInput, verInput);
     }
 
