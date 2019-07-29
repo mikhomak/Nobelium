@@ -46,5 +46,4 @@ public class Player : MonoBehaviour
         this.horInput = horInput;
         this.verInput = verInput;
     }
-
 }

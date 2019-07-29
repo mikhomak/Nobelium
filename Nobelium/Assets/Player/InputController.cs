@@ -15,8 +15,6 @@ public class InputController : MonoBehaviour
         weapon = GetComponentInChildren<Weapon>();
     }
 
-
-
     private void Update()
     {
         getInputs();
@@ -28,7 +26,6 @@ public class InputController : MonoBehaviour
     {
         return Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
-
 
     private void getInputs()
     {
