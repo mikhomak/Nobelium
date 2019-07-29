@@ -18,7 +18,7 @@ public class Weapon : MonoBehaviour
 
     private void shoot()
     {
-        if (AudioPeer.getFreqBands(5) > 1.2f)
+        if (AudioPeer.getFreqBands(5) > 1.5f)
         {
                 GameObject bulletGO = Instantiate(bulletPrefab, transform.position, transform.rotation);
                 Bullet bullet = bulletGO.GetComponent<Bullet>();
