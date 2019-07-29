@@ -23,6 +23,12 @@ public class Player : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
         createComponents();
+        setStats();
+    }
+
+    private void setStats()
+    {
+        movementComponent.setSpeed(speed);
     }
 
     private void createComponents()
@@ -32,7 +38,7 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        movementComponent.movement(horInput);
+        movementComponent.movement(horInput, verInput);
     }
 
     public void setInputs(float horInput, float verInput)
@@ -40,5 +46,4 @@ public class Player : MonoBehaviour
         this.horInput = horInput;
         this.verInput = verInput;
     }
-
 }

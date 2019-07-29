@@ -1,5 +1,13 @@
 sceneSetups:
-- path: Assets/Scenes/SampleScene.unity
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+- path: Assets/Scenes/MishaScene.unity
+=======
+- path: Assets/Scenes/JumpTest.unity
+>>>>>>> Stashed changes
+=======
+- path: Assets/Scenes/JumpTest.unity
+>>>>>>> Stashed changes
   isLoaded: 1
   isActive: 1
   isSubScene: 0
