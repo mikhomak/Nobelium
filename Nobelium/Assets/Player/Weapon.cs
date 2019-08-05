@@ -18,14 +18,14 @@ public class Weapon : MonoBehaviour
 
     private void shoot()
     {
-        if (AudioPeer.getFreqBands(5) > 1.5f)
+        if (AudioPeer.getBandBuffer(5) > 1.5f)
         {
             GameObject bulletGO = Instantiate(bulletPrefab, transform.position, transform.rotation);
             Bullet bullet = bulletGO.GetComponent<Bullet>();
-            float scale = AudioPeer.getFreqBands(0) > 1 ? AudioPeer.getFreqBands(0) : 1;
+            float scale = AudioPeer.getBandBuffer(0) > 1 ? AudioPeer.getBandBuffer(0) : 1;
             bulletGO.transform.localScale = new Vector3(1, 1, 1) * scale * 1.2f;
             bullet.setDirection(transform.up * -1);
-            bullet.setSpeedMultiplier(AudioPeer.getFreqBands(5));
+            bullet.setSpeedMultiplier(AudioPeer.getBandBuffer(5));
             fireRateTimer = 0f;
         }
         fireRateTimer += Time.deltaTime;

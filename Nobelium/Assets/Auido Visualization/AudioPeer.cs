@@ -7,12 +7,15 @@ using UnityEngine;
 public class AudioPeer : MonoBehaviour
 {
     [SerializeField] private static float[] freqBand = new float[8];
+    [SerializeField] private static float[] bandBuffer = new float[8];
+    [SerializeField] private static float[] bufferDescrease = new float[8];
     [SerializeField] private static float[] samples = new float[512];
     private AudioSource audioSource;
 
 
     public static float getSample(int i) { return samples[i]; }
     public static float getFreqBands(int i) { return freqBand[i]; }
+    public static float getBandBuffer(int i) { return bandBuffer[i]; }
 
     private void Start()
     {
@@ -23,6 +26,9 @@ public class AudioPeer : MonoBehaviour
     {
         getSpectrumAudioSource();
         updateFrequencyBrands();
+        updateBandBuffer();
+        for (int i = 0; i < freqBand.Length; i++) 
+            Debug.Log("Freq band " + i + " - "+ freqBand[i]);
     }
 
     private void getSpectrumAudioSource()
@@ -46,6 +52,24 @@ public class AudioPeer : MonoBehaviour
             }
             average /= count;
             freqBand[i] = average * 10;
+        }
+    }
+
+    private void updateBandBuffer()
+    {
+        for (int i = 0; i < 8; i++)
+        {
+            if(freqBand[i] > bandBuffer[i])
+            {
+                bandBuffer[i] = freqBand[i];
+                bufferDescrease[i] = 0.005f;
+            }
+            if (freqBand[i] < bandBuffer[i])
+            {
+                bandBuffer[i] -= bufferDescrease[i];
+                bufferDescrease[i] *= 1.2f;
+
+            }
         }
     }
 
