@@ -21,17 +21,15 @@ public class Enemy : MonoBehaviour
 
     private void FixedUpdate()
     {
-        shoot(getDirection());
     }
 
-    private void shoot(direction)
+    private void shoot(Vector3 direction)
     {
-        Instantiate(GameObject)
     }
 
     private float getDirection()
     {
-        return new Vector2(playerPos.)
+        return 0f;
     }
     private void setStats()
     {
