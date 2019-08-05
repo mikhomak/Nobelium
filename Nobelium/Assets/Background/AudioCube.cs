@@ -5,11 +5,21 @@ using UnityEngine;
 public class AudioCube : MonoBehaviour
 {
     [SerializeField] private float transformScale = 2;
+    [SerializeField] private float minScale = 0.3f;
+    [SerializeField] private float maxScale = 2f;
+
+    private SpriteRenderer sprite;
+
+    private void Start()
+    {
+        sprite = GetComponent<SpriteRenderer>();
+    }
 
     private void Update()
     {
-        float scale = AudioPeer.getBandBuffer(4) > 2.2 ? 2.2f: AudioPeer.getBandBuffer(5);
-        scale = scale < 0.7f ? 0.7f : scale;
+        Color color = new Color(AudioPeer.getAudioBandBuffer(1), AudioPeer.getAudioBandBuffer(5), AudioPeer.getAudioBandBuffer(3));
+        sprite.color = color;
+        float scale = CommonMethods.getValueInRange(AudioPeer.getAudioBandBuffer(4), minScale, maxScale);
         transform.localScale = new Vector3(1, scale, 1);
     }
 }

@@ -11,6 +11,6 @@ public class MusicCube : MonoBehaviour
 
     private void Update()
     {
-        transform.localScale = new Vector3(transform.localScale.x, (AudioPeer.getBandBuffer(band) * scaleMultipler) + startScale, transform.localScale.z);
+        transform.localScale = new Vector3(transform.localScale.x, (AudioPeer.getAudioBandBuffer(band) * scaleMultipler) + startScale, transform.localScale.z);
     }
 }

@@ -8,10 +8,12 @@ public class Background : MonoBehaviour
     [SerializeField] private int direction = 1;
     [SerializeField] private float timeToChangeDirection = 2f;
     [SerializeField] private float timerToChangeDirection = 0f;
+    [SerializeField] private float minSpeed = 10f;
+    [SerializeField] private float maxSpeed = 60f;
 
     private void Update()
     {
-        if(AudioPeer.getBandBuffer(0) > 1)
+        if(AudioPeer.getAudioBandBuffer(0) > 0.3f)
         {
             if (timerToChangeDirection > timeToChangeDirection)
             {
@@ -20,7 +22,7 @@ public class Background : MonoBehaviour
             }
         }
         timerToChangeDirection += Time.deltaTime;
-        float scale = AudioPeer.getBandBuffer(6) * musicScale < 1 ? musicScale : AudioPeer.getBandBuffer(6) * musicScale;
+        float scale = CommonMethods.getValueInRange(AudioPeer.getAudioBandBuffer(6), minSpeed, maxSpeed);
         scale *= direction;
         transform.Rotate(Vector3.forward, Time.deltaTime * scale);
     }

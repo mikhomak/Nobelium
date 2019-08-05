@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 30049f6504d68d44c9a2476f60ab6b60, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.21681976, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -95,6 +95,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transformScale: 2
+  minScale: 0.3
+  maxScale: 2
 --- !u!1 &1708190913146058451
 GameObject:
   m_ObjectHideFlags: 0
@@ -146,6 +148,8 @@ MonoBehaviour:
   direction: 1
   timeToChangeDirection: 5
   timerToChangeDirection: 0
+  minSpeed: 10
+  maxSpeed: 60
 --- !u!1 &2670397247057219072
 GameObject:
   m_ObjectHideFlags: 0
@@ -299,7 +303,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 30049f6504d68d44c9a2476f60ab6b60, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.990566, g: 0.023362402, b: 0.023362402, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -322,6 +326,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transformScale: 2
+  minScale: 0.3
+  maxScale: 2
 --- !u!1 &7895896151367813250
 GameObject:
   m_ObjectHideFlags: 0
@@ -394,7 +400,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 30049f6504d68d44c9a2476f60ab6b60, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.7670617, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -417,3 +423,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transformScale: 2
+  minScale: 0.3
+  maxScale: 2
