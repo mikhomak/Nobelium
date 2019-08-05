@@ -8,7 +8,6 @@ public class Enemy : MonoBehaviour
     [Header("Stats")]
     [SerializeField] private float speed;
     private Rigidbody2D rb2d;
-    private InputController playerPos;
 
     private MovementComponent movementComponent;
 
@@ -21,17 +20,15 @@ public class Enemy : MonoBehaviour
 
     private void FixedUpdate()
     {
-        shoot(getDirection());
     }
 
-    private void shoot(direction)
+    private void shoot(Vector3 direction)
     {
-        Instantiate(GameObject)
     }
 
     private float getDirection()
     {
-        return new Vector2(playerPos.)
+        return 0f;
     }
     private void setStats()
     {

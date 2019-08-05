@@ -6,13 +6,20 @@ using UnityEngine;
 [RequireComponent (typeof (AudioSource))]
 public class AudioPeer : MonoBehaviour
 {
+    [SerializeField] private static float[] audioBand = new float[8];
+    [SerializeField] private static float[] audioBandBuffer = new float[8];
+    [SerializeField] private static float[] freqBandHighest = new float[8];
     [SerializeField] private static float[] freqBand = new float[8];
+    [SerializeField] private static float[] bandBuffer = new float[8];
+    [SerializeField] private static float[] bufferDescrease = new float[8];
     [SerializeField] private static float[] samples = new float[512];
     private AudioSource audioSource;
 
 
     public static float getSample(int i) { return samples[i]; }
     public static float getFreqBands(int i) { return freqBand[i]; }
+    public static float getBandBuffer(int i) { return bandBuffer[i]; }
+    public static float getAudioBandBuffer(int i) { return audioBandBuffer[i]; }
 
     private void Start()
     {
@@ -23,6 +30,10 @@ public class AudioPeer : MonoBehaviour
     {
         getSpectrumAudioSource();
         updateFrequencyBrands();
+        updateBandBuffer();
+        updateAudioBands();
+        for (int i = 0; i < freqBand.Length; i++) 
+            Debug.Log("Freq band " + i + " - "+ freqBand[i]);
     }
 
     private void getSpectrumAudioSource()
@@ -49,4 +60,36 @@ public class AudioPeer : MonoBehaviour
         }
     }
 
+    private void updateBandBuffer()
+    {
+        for (int i = 0; i < 8; i++)
+        {
+            if(freqBand[i] > bandBuffer[i])
+            {
+                bandBuffer[i] = freqBand[i];
+                bufferDescrease[i] = 0.005f;
+            }
+            if (freqBand[i] < bandBuffer[i])
+            {
+                bandBuffer[i] -= bufferDescrease[i];
+                bufferDescrease[i] *= 1.2f;
+
+            }
+        }
+    }
+
+
+    private void updateAudioBands()
+    {
+        for (int i = 0; i < 8; i++)
+        {
+            if(freqBand[i] > freqBandHighest[i])
+            {
+                freqBandHighest[i] = freqBand[i];
+            }
+            audioBand[i] = (freqBand[i] / freqBandHighest[i]);
+            audioBandBuffer[i] = (bandBuffer[i] / freqBandHighest[i]);
+        }
+
+    }
 }
