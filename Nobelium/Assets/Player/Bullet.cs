@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] private float speed = 5f;
+    [SerializeField] private float speed;
     [SerializeField] private Vector2 direction;
     [SerializeField] private float deathTime = 3f;
     [SerializeField] private float damage;
-    [SerializeField] private float scale;
+    [SerializeField] private float minSpeed=3;
+    [SerializeField] private float maxSpeed=5;
+    [SerializeField] private float minScale=1;
+    [SerializeField] private float maxScale=3;
     private MovementComponent movementComponent;
     private Rigidbody2D rb2d;
 
@@ -43,12 +46,15 @@ public class Bullet : MonoBehaviour
         
     }
 
+    public void setScaleMultiplier(float multiplier)
+    {
+        float scale = CommonMethods.getValueInRange(multiplier, minScale, maxScale);
+        transform.localScale = new Vector3(1,1,1)*scale;
+    }
+
     public void setSpeedMultiplier(float multiplier)
     {
-        if (multiplier == 0)
-            multiplier = 0.5f;
-        if (multiplier > 2)
-            multiplier = 2;
-        speed *= multiplier;
+        speed =  CommonMethods.getValueInRange(multiplier, minSpeed, maxSpeed);
     }
+
 }
