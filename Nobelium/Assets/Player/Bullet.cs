@@ -13,6 +13,7 @@ public class Bullet : MonoBehaviour
     private Rigidbody2D rb2d;
 
     public void setDirection(Vector2 direction) { this.direction = direction; }
+    public void setSpeed(float speed) { this.speed = speed; }
 
     void Start()
     {
@@ -40,5 +41,14 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         
+    }
+
+    public void setSpeedMultiplier(float multiplier)
+    {
+        if (multiplier == 0)
+            multiplier = 0.5f;
+        if (multiplier > 2)
+            multiplier = 2;
+        speed *= multiplier;
     }
 }

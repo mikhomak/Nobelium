@@ -8,7 +8,6 @@ public class Enemy : MonoBehaviour
     [Header("Stats")]
     [SerializeField] private float speed;
     private Rigidbody2D rb2d;
-    private InputController playerPos;
 
     private MovementComponent movementComponent;
 

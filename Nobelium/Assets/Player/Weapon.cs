@@ -20,12 +20,13 @@ public class Weapon : MonoBehaviour
     {
         if (AudioPeer.getFreqBands(5) > 1.5f)
         {
-                GameObject bulletGO = Instantiate(bulletPrefab, transform.position, transform.rotation);
-                Bullet bullet = bulletGO.GetComponent<Bullet>();
-                float scale = AudioPeer.getFreqBands(0) > 1 ? AudioPeer.getFreqBands(0) : 1;
-                bulletGO.transform.localScale = new Vector3(1, 1, 1) * scale * 1.2f;
-                bullet.setDirection(transform.up * -1);
-                fireRateTimer = 0f;
+            GameObject bulletGO = Instantiate(bulletPrefab, transform.position, transform.rotation);
+            Bullet bullet = bulletGO.GetComponent<Bullet>();
+            float scale = AudioPeer.getFreqBands(0) > 1 ? AudioPeer.getFreqBands(0) : 1;
+            bulletGO.transform.localScale = new Vector3(1, 1, 1) * scale * 1.2f;
+            bullet.setDirection(transform.up * -1);
+            bullet.setSpeedMultiplier(AudioPeer.getFreqBands(5));
+            fireRateTimer = 0f;
         }
         fireRateTimer += Time.deltaTime;
 
