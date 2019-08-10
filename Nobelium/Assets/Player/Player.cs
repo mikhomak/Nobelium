@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, ICharacter
 {
     [Header("Inputs")]
     [SerializeField] private float horInput;
@@ -45,5 +45,10 @@ public class Player : MonoBehaviour
     {
         this.horInput = horInput;
         this.verInput = verInput;
+    }
+
+    public void die()
+    {
+        GameManager.instance.gameOver();
     }
 }

@@ -1,11 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
 
-public class HealthComponent : MonoBehaviour, IComponent
+public class HealthComponent : IComponent
 {
     private float health = 100f;
     private bool activated = true;
+    private ICharacter character;
+
     private void takeDamage(float health, float damage)
     {
         if (activated == false)
@@ -17,9 +18,13 @@ public class HealthComponent : MonoBehaviour, IComponent
         }
     }
 
+    HealthComponent(ICharacter character) {
+        this.character = character;
+    }
+
     private void die()
     {
-        Destroy(this.gameObject);
+        character.die();
     }
 
     public void activate()
@@ -27,8 +32,13 @@ public class HealthComponent : MonoBehaviour, IComponent
         activated = true;
     }
 
-    public void desactivate()
+    public void deactivate()
     {
         activated = false;
+    }
+
+    public void addToListeners()
+    {
+        GameManager.instance.addListenerToMainEvents(deactivate, activate);
     }
 }
