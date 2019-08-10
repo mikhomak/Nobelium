@@ -34,8 +34,13 @@ public class MovementComponent : IComponent
         activated = true;
     }
 
-    public void desactivate()
+    public void deactivate()
     {
         activated = false;
+    }
+
+    public void addToListeners()
+    {
+        GameManager.instance.addListenerToMainEvents(deactivate, activate);
     }
 }

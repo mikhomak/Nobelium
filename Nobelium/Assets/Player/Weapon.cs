@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Weapon : MonoBehaviour
+public class Weapon : MonoBehaviour, IComponent
 {
 
     [SerializeField] private Vector3 mousePosition;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private float fireRate = 0.01f;
     [SerializeField] private float fireRateTimer = 0f;
+    [SerializeField] private bool activated = true;
 
     private void FixedUpdate()
     {
@@ -49,4 +50,18 @@ public class Weapon : MonoBehaviour
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 
+    public void activate()
+    {
+        activated = true;
+    }
+
+    public void deactivate()
+    {
+        activated = false;
+    }
+
+    public void addToListeners()
+    {
+        GameManager.instance.addListenerToMainEvents(deactivate, activate);
+    }
 }

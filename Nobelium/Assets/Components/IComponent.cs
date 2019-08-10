@@ -6,6 +6,8 @@ public interface IComponent
 {
     void activate();
 
-    void desactivate();
+    void deactivate();
+
+    void addToListeners();
 
 }
