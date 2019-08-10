@@ -6,6 +6,8 @@ public class HealthComponent : MonoBehaviour, IComponent
 {
     private float health = 100f;
     private bool activated = true;
+
+
     private void takeDamage(float health, float damage)
     {
         if (activated == false)
@@ -17,6 +19,13 @@ public class HealthComponent : MonoBehaviour, IComponent
         }
     }
 
+    private void Start()
+    {
+        
+    }
+
+
+
     private void die()
     {
         Destroy(this.gameObject);
@@ -27,8 +36,13 @@ public class HealthComponent : MonoBehaviour, IComponent
         activated = true;
     }
 
-    public void desactivate()
+    public void deactivate()
     {
         activated = false;
+    }
+
+    public void addToListeners()
+    {
+        GameManager.instance.addListenerToMainEvents(deactivate, activate);
     }
 }

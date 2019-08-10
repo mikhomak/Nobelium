@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
-    GameObject player;
+    private GameObject player;
+
+    UnityEvent pauseEvent = new UnityEvent();
+    UnityEvent resumeEvent = new UnityEvent();
 
     void Awake()
     {
@@ -15,7 +19,24 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(gameObject);
+        findPlayer();
+    }
+
+
+    public void addListenerToMainEvents(UnityAction pauseAction, UnityAction resumeAction)
+    {
+        pauseEvent.AddListener(pauseAction);
+        pauseEvent.AddListener(presumeAction);
+    }
+
+    private void pauseGame()
+    {
+        pauseEvent.Invoke();
+    }
+
+    private void findPlayer(){
         player = GameObject.FindGameObjectWithTag("player");
+
     }
 
     public Vector3 getPlayerPos(GameObject player)
