@@ -32,8 +32,6 @@ public class AudioPeer : MonoBehaviour
         updateFrequencyBrands();
         updateBandBuffer();
         updateAudioBands();
-        for (int i = 0; i < freqBand.Length; i++) 
-            Debug.Log("Freq band " + i + " - "+ freqBand[i]);
     }
 
     private void getSpectrumAudioSource()
