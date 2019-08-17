@@ -16,7 +16,7 @@ public class Player : MonoBehaviour, ICharacter
     private Rigidbody2D rb2d;
 
     private MovementComponent movementComponent;
-
+    private HealthComponent healthComponent;
 
 
     private void Start()
@@ -34,6 +34,7 @@ public class Player : MonoBehaviour, ICharacter
     private void createComponents()
     {
         movementComponent = new MovementComponent(rb2d);
+        healthComponent = new HealthComponent(this);
     }
 
     private void FixedUpdate()
@@ -50,5 +51,10 @@ public class Player : MonoBehaviour, ICharacter
     public void die()
     {
         GameManager.instance.gameOver();
+    }
+
+    public HealthComponent GetHealthComponent()
+    {
+        return healthComponent;
     }
 }

@@ -10,6 +10,7 @@ public class Weapon : MonoBehaviour, IComponent
     [SerializeField] private float fireRate = 0.01f;
     [SerializeField] private float fireRateTimer = 0f;
     [SerializeField] private bool activated = true;
+    [SerializeField] private float damage = 1f;
 
     private void FixedUpdate()
     {
@@ -26,6 +27,7 @@ public class Weapon : MonoBehaviour, IComponent
             bullet.setDirection(transform.up * -1);
             bullet.setSpeedMultiplier(AudioPeer.getAudioBandBuffer(5));
             bullet.setScaleMultiplier(AudioPeer.getAudioBandBuffer(0));
+            bullet.setDamage(damage);
             fireRateTimer = 0f;
         }
         fireRateTimer += Time.deltaTime;
