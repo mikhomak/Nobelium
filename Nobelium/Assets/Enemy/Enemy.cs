@@ -3,41 +3,43 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour, ICharacter
 {
     [Header("Stats")]
     [SerializeField] private float speed;
     private Rigidbody2D rb2d;
 
+
+    private HealthComponent healthComponent;
     private MovementComponent movementComponent;
 
-    private void Start()
+    private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
         createComponents();
         setStats();
     }
 
-    private void FixedUpdate()
+    private void createComponents()
     {
+        movementComponent = new MovementComponent(rb2d);
+        healthComponent = new HealthComponent(this);
     }
 
-    private void shoot(Vector3 direction)
-    {
-    }
-
-    private float getDirection()
-    {
-        return 0f;
-    }
     private void setStats()
     {
         movementComponent.setSpeed(speed);
     }
 
-    private void createComponents()
+    
+
+    public void die()
     {
-        movementComponent = new MovementComponent(rb2d);
+        Destroy(gameObject);
     }
 
+    public HealthComponent GetHealthComponent()
+    {
+        return healthComponent;
+    }
 }

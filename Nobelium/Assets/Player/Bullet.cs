@@ -17,6 +17,7 @@ public class Bullet : MonoBehaviour
 
     public void setDirection(Vector2 direction) { this.direction = direction; }
     public void setSpeed(float speed) { this.speed = speed; }
+    public void setDamage(float damage) { this.damage = damage; }
 
     void Start()
     {
@@ -43,7 +44,12 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if(collision.gameObject.layer == CommonMethods.HURTBOX)
+        {
+            Debug.Log(collision.gameObject.layer);
+            collision.GetComponent<IHurtbox>().takeDamage(damage);
+            Destroy(gameObject);
+        }
     }
 
     public void setScaleMultiplier(float multiplier)

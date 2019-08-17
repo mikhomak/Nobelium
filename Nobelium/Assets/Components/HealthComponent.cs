@@ -7,7 +7,13 @@ public class HealthComponent : IComponent
     private bool activated = true;
     private ICharacter character;
 
-    private void takeDamage(float health, float damage)
+
+    public HealthComponent(ICharacter character)
+    {
+        this.character = character;
+    }
+
+    public void takeDamage(float damage)
     {
         if (activated == false)
             return;
@@ -16,10 +22,6 @@ public class HealthComponent : IComponent
         {
             die();
         }
-    }
-
-    HealthComponent(ICharacter character) {
-        this.character = character;
     }
 
     private void die()
