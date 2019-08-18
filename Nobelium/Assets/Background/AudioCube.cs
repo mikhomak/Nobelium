@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class AudioCube : MonoBehaviour
 {
-    [SerializeField] private float transformScale = 2;
     [SerializeField] private float minScale = 0.3f;
     [SerializeField] private float maxScale = 2f;
 
@@ -12,7 +11,7 @@ public class AudioCube : MonoBehaviour
 
     private void Start()
     {
-        sprite = GetComponent<SpriteRenderer>();
+        sprite = GetComponentInChildren<SpriteRenderer>();
     }
 
     private void Update()

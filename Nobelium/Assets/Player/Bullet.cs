@@ -12,6 +12,8 @@ public class Bullet : MonoBehaviour
     [SerializeField] private float maxSpeed=5;
     [SerializeField] private float minScale=1;
     [SerializeField] private float maxScale=3;
+    [SerializeField] private float minDamage=1;
+    [SerializeField] private float maxDamage=3;
     private MovementComponent movementComponent;
     private Rigidbody2D rb2d;
 
@@ -44,9 +46,8 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.layer == CommonMethods.HURTBOX)
+        if(collision.gameObject.layer == CommonMethods.HURTBOX && collision.gameObject.tag.Equals("Player") == false)
         {
-            Debug.Log(collision.gameObject.layer);
             collision.GetComponent<IHurtbox>().takeDamage(damage);
             Destroy(gameObject);
         }
@@ -56,6 +57,8 @@ public class Bullet : MonoBehaviour
     {
         float scale = CommonMethods.getValueInRange(multiplier, minScale, maxScale);
         transform.localScale = new Vector3(1,1,1)*scale;
+        float damageScale = CommonMethods.getValueInRange(multiplier, minDamage, maxDamage);
+        setDamage(damageScale);
     }
 
     public void setSpeedMultiplier(float multiplier)
