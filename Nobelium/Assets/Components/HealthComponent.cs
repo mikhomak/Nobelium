@@ -7,6 +7,7 @@ public class HealthComponent : IComponent
     private bool activated = true;
     private ICharacter character;
 
+    public void setHealth(float health) { this.health = health; }
 
     public HealthComponent(ICharacter character)
     {

@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour, ICharacter
 {
     [Header("Stats")]
     [SerializeField] private float speed;
+    [SerializeField] private float health;
     private Rigidbody2D rb2d;
 
 
@@ -29,6 +30,7 @@ public class Enemy : MonoBehaviour, ICharacter
     private void setStats()
     {
         movementComponent.setSpeed(speed);
+        healthComponent.setHealth(health);
     }
 
     
