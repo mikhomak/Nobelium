@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Background : MonoBehaviour
 {
-    [SerializeField] private float musicScale = 15f;
     [SerializeField] private int direction = 1;
     [SerializeField] private float timeToChangeDirection = 2f;
     [SerializeField] private float timerToChangeDirection = 0f;

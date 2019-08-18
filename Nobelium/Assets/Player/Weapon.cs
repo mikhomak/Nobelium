@@ -14,11 +14,6 @@ public class Weapon : MonoBehaviour, IComponent
     [SerializeField] private GameObject shootPoint;
     [SerializeField] private Vector3 pivotPoint;
 
-    private void Start()
-    {
-        pivotPoint = pivot.transform.position;
-    }
-
     private void FixedUpdate()
     {
         rotate();
@@ -58,6 +53,7 @@ public class Weapon : MonoBehaviour, IComponent
 
     private void movement()
     {
+        pivotPoint = pivot.transform.position;
         Vector2 mouseOffset = getDirection();
         transform.position = new Vector2(mouseOffset.x, mouseOffset.y);
         float distance = Vector2.Distance(transform.position, pivotPoint);

@@ -19,7 +19,7 @@ public class Player : MonoBehaviour, ICharacter
     private HealthComponent healthComponent;
 
 
-    private void Start()
+    private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
         createComponents();
