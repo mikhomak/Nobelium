@@ -569,7 +569,7 @@ Transform:
   m_GameObject: {fileID: 7397726011101082331}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children:
   - {fileID: 1203643905076681405}
   - {fileID: 5467763803714730125}
@@ -592,6 +592,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   health: 1000
+  boxPrefab: {fileID: 6181885351586379621, guid: eb86bbddc0d8b2e4d9bd0b89d09b0c94,
+    type: 3}
+  boxPoints: {fileID: 0}
+  boxCooldown: 6
+  boxTimer: 0
 --- !u!1 &8767357261518906587
 GameObject:
   m_ObjectHideFlags: 0
