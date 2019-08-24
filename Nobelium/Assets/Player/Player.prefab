@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6963988496471038976}
   m_Layer: 0
   m_Name: Sprite
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -251,9 +251,9 @@ GameObject:
   - component: {fileID: 1967391470878475464}
   - component: {fileID: 1546758389904996820}
   - component: {fileID: 3823742538284672691}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Hurtbox
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -326,7 +326,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2183539519792669395}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.26, z: 0}
+  m_LocalPosition: {x: 0, y: -0.174, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8204876144477214842}
@@ -382,7 +382,7 @@ MonoBehaviour:
     type: 3}
   activated: 1
   damage: 1
-  radius: 0.4
+  radius: 0.3
   pivot: {fileID: 920822656110997277}
   shootPoint: {fileID: 2183539519792669395}
   pivotPoint: {x: 0, y: 0, z: 0}
@@ -524,7 +524,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &2286340372941310496
 MonoBehaviour:

@@ -45,7 +45,7 @@ public class Hitbox : MonoBehaviour, ICharacter
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.layer == CommonMethods.HURTBOX)
+        if(collision.gameObject.layer == CommonMethods.HURTBOX_PLAYER)
         {
             collision.GetComponent<IHurtbox>().takeDamage(actualDamage);
         }
