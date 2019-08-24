@@ -46,7 +46,7 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.layer == CommonMethods.HURTBOX && collision.gameObject.tag.Equals("Player") == false)
+        if(collision.gameObject.layer == CommonMethods.HURTBOX)
         {
             collision.GetComponent<IHurtbox>().takeDamage(damage);
             Destroy(gameObject);

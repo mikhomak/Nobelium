@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3493268498395212835}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3849950670393073945}
   - component: {fileID: 5763477557997237590}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,13 +54,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4539024856678106015}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 6215338919778155072}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!212 &5763477557997237590
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -100,7 +100,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 110
-  m_Sprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: b305da95d0d3cc949ae7554e7198f477, type: 3}
   m_Color: {r: 1, g: 0.9160186, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 1048723592613723491}
   - component: {fileID: 5422583293450549832}
   - component: {fileID: 7662003764410804679}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,7 +162,12 @@ MonoBehaviour:
   direction: {x: 0, y: 0}
   deathTime: 3
   damage: 0
-  scale: 0
+  minSpeed: 3
+  maxSpeed: 5
+  minScale: 1
+  maxScale: 3
+  minDamage: 1
+  maxDamage: 3
 --- !u!58 &5422583293450549832
 CircleCollider2D:
   m_ObjectHideFlags: 0

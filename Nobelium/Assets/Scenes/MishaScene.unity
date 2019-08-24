@@ -200,6 +200,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8759707968186821692, guid: 310bccda38d0f5141a3e32ae5d574821,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0272383efc2c3bb4b811331ad1de66d3, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 310bccda38d0f5141a3e32ae5d574821, type: 3}
 --- !u!1 &519420028
@@ -213,6 +218,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -228,6 +234,22 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcdf63c30ed7f534d8a142ff135f67b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeDuration: 0
+  minShakeAmount: 0
+  maxShakeAmount: 0.12
+  decreaseFactor: 1
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -471,26 +493,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2489164602847034820, guid: fcab83d0806eb7c4c8bd703fb530e14a,
-        type: 3}
-      propertyPath: radius
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4917680654154777973, guid: fcab83d0806eb7c4c8bd703fb530e14a,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.174
-      objectReference: {fileID: 0}
-    - target: {fileID: 2098045514506467015, guid: fcab83d0806eb7c4c8bd703fb530e14a,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 661712238276926323, guid: fcab83d0806eb7c4c8bd703fb530e14a,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcab83d0806eb7c4c8bd703fb530e14a, type: 3}
 --- !u!1001 &1625826622
@@ -641,7 +643,7 @@ PrefabInstance:
     - target: {fileID: 1708190913146058451, guid: 92f0a7f3b29d6204598b92c83105d233,
         type: 3}
       propertyPath: m_Name
-      value: 'Background '
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 1671776104255059246, guid: 92f0a7f3b29d6204598b92c83105d233,
         type: 3}
@@ -703,5 +705,25 @@ PrefabInstance:
       propertyPath: boxPoints
       value: 
       objectReference: {fileID: 288698984}
+    - target: {fileID: 4251325496073704424, guid: 92f0a7f3b29d6204598b92c83105d233,
+        type: 3}
+      propertyPath: coolor.r
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4251325496073704424, guid: 92f0a7f3b29d6204598b92c83105d233,
+        type: 3}
+      propertyPath: coolor.g
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4251325496073704424, guid: 92f0a7f3b29d6204598b92c83105d233,
+        type: 3}
+      propertyPath: coolor.b
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4251325496073704424, guid: 92f0a7f3b29d6204598b92c83105d233,
+        type: 3}
+      propertyPath: coolor.a
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92f0a7f3b29d6204598b92c83105d233, type: 3}
