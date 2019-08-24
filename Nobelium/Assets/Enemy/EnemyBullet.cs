@@ -13,7 +13,7 @@ public class EnemyBullet : MonoBehaviour, IComponent
     [SerializeField] private float actualDamage;
     [SerializeField] private float liveTime;
     [SerializeField] private Vector2 direction;
-
+    [SerializeField] private ParticleSystem deathEffect;
     private MovementComponent movementComponent;
     private Rigidbody2D rb2d;
 
@@ -52,6 +52,11 @@ public class EnemyBullet : MonoBehaviour, IComponent
             collision.GetComponent<IHurtbox>().takeDamage(actualDamage);
             Destroy(gameObject);
         }
+    }
+
+    private void OnDestroy()
+    {
+        Instantiate(deathEffect, transform.position, transform.rotation);
     }
 
     public void setDirection(Vector2 direction) { this.direction = direction; }

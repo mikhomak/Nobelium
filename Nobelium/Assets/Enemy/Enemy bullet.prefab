@@ -136,6 +136,8 @@ MonoBehaviour:
   actualDamage: 0
   liveTime: 3
   direction: {x: 0, y: 0}
+  deathEffect: {fileID: 3589657108835014577, guid: add22f7a847ae3d448418f32132a1ca1,
+    type: 3}
 --- !u!50 &931879049521185528
 Rigidbody2D:
   serializedVersion: 4

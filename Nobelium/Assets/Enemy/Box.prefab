@@ -330,7 +330,7 @@ MonoBehaviour:
   maxShootTime: 1.7
   shootTime: 0
   shootTimer: 0
-  deathEffectPrefab: {fileID: 3589657108835014577, guid: add22f7a847ae3d448418f32132a1ca1,
+  deathEffectPrefab: {fileID: 3589657108835014577, guid: d07ab5d488eaa3641a17c622dcdc9072,
     type: 3}
   bulletPrefab: {fileID: 7930417353760584102, guid: 440216d8aedc5e347b8bf4329571cfa4,
     type: 3}
@@ -339,6 +339,7 @@ MonoBehaviour:
   - {fileID: 2432568181775630452}
   - {fileID: 8789366462480297978}
   - {fileID: 5288993926281634116}
+  bulletDirection: []
 --- !u!1 &8435481664322847270
 GameObject:
   m_ObjectHideFlags: 0
