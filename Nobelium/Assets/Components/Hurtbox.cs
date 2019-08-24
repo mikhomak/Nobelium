@@ -32,6 +32,7 @@ public class Hurtbox : MonoBehaviour, IHurtbox
 
     public void takeDamage(float damage)
     {
+        Debug.Log(damage);
         healthComponent.takeDamage(damage * damageMultiplier);
     }
 }
