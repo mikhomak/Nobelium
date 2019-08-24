@@ -13,7 +13,6 @@ public class Hurtbox : MonoBehaviour, IHurtbox
     {
         character = GetComponentInParent<ICharacter>();
         healthComponent = character.GetHealthComponent();
-        Debug.Log(healthComponent);
     }
 
     public void activate()

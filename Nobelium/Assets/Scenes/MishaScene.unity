@@ -200,6 +200,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8759707968186821692, guid: 310bccda38d0f5141a3e32ae5d574821,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0272383efc2c3bb4b811331ad1de66d3, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 310bccda38d0f5141a3e32ae5d574821, type: 3}
 --- !u!1 &519420028
@@ -298,8 +303,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 996204397}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -422,50 +426,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 082d483b6a2991040b9da85970474b17, type: 3}
---- !u!1 &996204396
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 996204397}
-  - component: {fileID: 996204398}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &996204397
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 996204396}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 519420032}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &996204398
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 996204396}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 17.68869, y: 9.983328, z: 0}
-  m_Center: {x: -0.0000038146973, y: -0.018795967, z: 0}
 --- !u!1001 &1529930167
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -745,5 +705,25 @@ PrefabInstance:
       propertyPath: boxPoints
       value: 
       objectReference: {fileID: 288698984}
+    - target: {fileID: 4251325496073704424, guid: 92f0a7f3b29d6204598b92c83105d233,
+        type: 3}
+      propertyPath: coolor.r
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4251325496073704424, guid: 92f0a7f3b29d6204598b92c83105d233,
+        type: 3}
+      propertyPath: coolor.g
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4251325496073704424, guid: 92f0a7f3b29d6204598b92c83105d233,
+        type: 3}
+      propertyPath: coolor.b
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4251325496073704424, guid: 92f0a7f3b29d6204598b92c83105d233,
+        type: 3}
+      propertyPath: coolor.a
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92f0a7f3b29d6204598b92c83105d233, type: 3}

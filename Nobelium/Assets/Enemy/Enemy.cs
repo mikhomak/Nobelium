@@ -52,7 +52,7 @@ public class Enemy : MonoBehaviour, ICharacter
         if (AudioPeer.getAudioBandBuffer(0) > 0.1f) {
             if (boxTimer > boxCooldown)
             {
-                int random = Random.Range(0,boxPoints.getMaxPoints()-1);
+                int random = Random.Range(4,boxPoints.getMaxPoints()-1);
                 boxPoints.updatePointsTaken();
                 for(int i = 0; i < random; i++)
                 {
