@@ -6,13 +6,14 @@ public class Hurtbox : MonoBehaviour, IHurtbox
 {
     private ICharacter character;
     private HealthComponent healthComponent;
-    [SerializeField] private bool activated;
+    [SerializeField] private bool activated = true;
     [SerializeField] private float damageMultiplier = 1;
 
     private void Start()
     {
         character = GetComponentInParent<ICharacter>();
         healthComponent = character.GetHealthComponent();
+        Debug.Log(healthComponent);
     }
 
     public void activate()
@@ -32,7 +33,6 @@ public class Hurtbox : MonoBehaviour, IHurtbox
 
     public void takeDamage(float damage)
     {
-        Debug.Log(damage);
         healthComponent.takeDamage(damage * damageMultiplier);
     }
 }
