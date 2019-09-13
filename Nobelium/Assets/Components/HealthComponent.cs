@@ -12,6 +12,7 @@ public class HealthComponent : IComponent
     public HealthComponent(ICharacter character)
     {
         this.character = character;
+        addToListeners();
     }
 
     public void takeDamage(float damage)
