@@ -30,13 +30,11 @@ public class GameManager : MonoBehaviour
         pauseEvent.AddListener(resumeAction);
     }
 
-    private void pauseGame()
-    {
+    public void pauseGame() {
         pauseEvent.Invoke();
     }
 
-    private void resumeGame()
-    {
+    public void resumeGame() {
         resumeEvent.Invoke();
     }
 
