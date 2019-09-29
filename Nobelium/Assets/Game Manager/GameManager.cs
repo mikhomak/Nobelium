@@ -1,10 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 
-public class GameManager : MonoBehaviour
-{
+public class GameManager : MonoBehaviour {
     public static GameManager instance = null;
     private GameObject player;
 
@@ -12,11 +9,10 @@ public class GameManager : MonoBehaviour
     private UnityEvent resumeEvent = new UnityEvent();
 
 
-    void Awake()
-    {
-        if(instance == null){
+    void Awake() {
+        if (instance == null) {
             instance = this;
-        }else if(instance != this){
+        } else if (instance != this) {
             Destroy(gameObject);
         }
         DontDestroyOnLoad(gameObject);
@@ -24,8 +20,7 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public void addListenerToMainEvents(UnityAction pauseAction, UnityAction resumeAction)
-    {
+    public void addListenerToMainEvents(UnityAction pauseAction, UnityAction resumeAction) {
         pauseEvent.AddListener(pauseAction);
         pauseEvent.AddListener(resumeAction);
     }
@@ -38,18 +33,16 @@ public class GameManager : MonoBehaviour
         resumeEvent.Invoke();
     }
 
-    public void gameOver()
-    {
+    public void gameOver() {
 
     }
 
-    private void findPlayer(){
+    private void findPlayer() {
         player = GameObject.FindGameObjectWithTag("Player");
 
     }
 
-    public Vector3 getPlayerPos(GameObject player)
-    {
+    public Vector3 getPlayerPos(GameObject player) {
         return new Vector3(player.transform.position.x, player.transform.position.y, 0);
     }
 }

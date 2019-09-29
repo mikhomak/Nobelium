@@ -208,7 +208,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minScale: 1
-  maxScale: 3
+  maxScale: 1.5
+  red: 0
+  green: 0
+  blue: 0
+  cubeColour: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1708190913146058451
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,7 +396,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.32, y: 3.79}
+  m_Size: {x: 2.68, y: 3.88}
   m_EdgeRadius: 0
 --- !u!1 &1942651516183406014
 GameObject:
@@ -702,7 +706,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minScale: 1
-  maxScale: 3
+  maxScale: 1.5
+  red: 0
+  green: 0
+  blue: 0
+  cubeColour: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &5435979583207370548
 GameObject:
   m_ObjectHideFlags: 0
@@ -822,7 +830,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 3
+  m_Radius: 3.1
 --- !u!114 &8494130392688109040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1073,7 +1081,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minScale: 1
-  maxScale: 3
+  maxScale: 1.5
+  red: 0
+  green: 0
+  blue: 0
+  cubeColour: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &8875521806823550512
 GameObject:
   m_ObjectHideFlags: 0
@@ -1144,7 +1156,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.32, y: 3.79}
+  m_Size: {x: 2.68, y: 3.88}
   m_EdgeRadius: 0
 --- !u!1 &9127161055141891234
 GameObject:
@@ -1216,5 +1228,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.32, y: 3.79}
+  m_Size: {x: 2.68, y: 3.88}
   m_EdgeRadius: 0

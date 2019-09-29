@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class Enemy : MonoBehaviour, ICharacter
-{
+public class Enemy : MonoBehaviour, ICharacter {
     [Header("Stats")]
     [SerializeField] private float speed;
     [SerializeField] private float health;
@@ -24,10 +20,13 @@ public class Enemy : MonoBehaviour, ICharacter
     private HealthComponent healthComponent;
     private MovementComponent movementComponent;
 
-    private void Awake()
-    {
+
+    
+    private void Awake() {
         rb2d = GetComponent<Rigidbody2D>();
+        Debug.Log("created" + healthComponent);
         createComponents();
+        Debug.Log("created" + healthComponent);
         setStats();
     }
 
@@ -35,14 +34,12 @@ public class Enemy : MonoBehaviour, ICharacter
         createBoxes();
     }
 
-    private void createComponents()
-    {
-        movementComponent = new MovementComponent(rb2d);
+    private void createComponents() {
         healthComponent = new HealthComponent(this);
+        movementComponent = new MovementComponent(rb2d);
     }
 
-    private void setStats()
-    {
+    private void setStats() {
         movementComponent.setSpeed(speed);
         healthComponent.setHealth(health);
     }
@@ -50,12 +47,10 @@ public class Enemy : MonoBehaviour, ICharacter
 
     private void createBoxes() {
         if (AudioPeer.getAudioBandBuffer(0) > 0.1f) {
-            if (boxTimer > boxCooldown)
-            {
-                int random = Random.Range(4,boxPoints.getMaxPoints()-1);
+            if (boxTimer > boxCooldown) {
+                int random = Random.Range(4, boxPoints.getMaxPoints() - 1);
                 boxPoints.updatePointsTaken();
-                for(int i = 0; i < random; i++)
-                {
+                for (int i = 0; i < random; i++) {
                     Instantiate(boxPrefab, boxPoints.getRandomPosition(), transform.rotation);
                 }
                 boxTimer = 0f;
@@ -65,13 +60,12 @@ public class Enemy : MonoBehaviour, ICharacter
     }
 
 
-    public void die()
-    {
+    public void die() {
         Destroy(gameObject);
     }
 
-    public HealthComponent GetHealthComponent()
-    {
+    public HealthComponent GetHealthComponent() {
+        Debug.Log(healthComponent);
         return healthComponent;
     }
 }

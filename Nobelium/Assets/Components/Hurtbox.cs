@@ -9,29 +9,24 @@ public class Hurtbox : MonoBehaviour, IHurtbox
     [SerializeField] private bool activated = true;
     [SerializeField] private float damageMultiplier = 1;
 
-    private void Start()
-    {
+    private void Start(){
         character = GetComponentInParent<ICharacter>();
         healthComponent = character.GetHealthComponent();
     }
 
-    public void activate()
-    {
+    public void activate() {
         activated = true;
     }
 
-    public void addToListeners()
-    {
+    public void addToListeners() {
         GameManager.instance.addListenerToMainEvents(deactivate, activate);
     }
 
-    public void deactivate()
-    {
+    public void deactivate() {
         activated = false;
     }
 
-    public void takeDamage(float damage)
-    {
+    public void takeDamage(float damage) {
         healthComponent.takeDamage(damage * damageMultiplier);
     }
 }
