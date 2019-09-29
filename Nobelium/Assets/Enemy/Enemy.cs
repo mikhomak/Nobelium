@@ -24,9 +24,7 @@ public class Enemy : MonoBehaviour, ICharacter {
     
     private void Awake() {
         rb2d = GetComponent<Rigidbody2D>();
-        Debug.Log("created" + healthComponent);
         createComponents();
-        Debug.Log("created" + healthComponent);
         setStats();
     }
 
@@ -65,7 +63,6 @@ public class Enemy : MonoBehaviour, ICharacter {
     }
 
     public HealthComponent GetHealthComponent() {
-        Debug.Log(healthComponent);
         return healthComponent;
     }
 }

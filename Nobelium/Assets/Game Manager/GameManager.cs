@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour {
 
 
     public void addListenerToMainEvents(UnityAction pauseAction, UnityAction resumeAction) {
+        Debug.Log("KSK" + pauseAction.Target);
         pauseEvent.AddListener(pauseAction);
         pauseEvent.AddListener(resumeAction);
     }

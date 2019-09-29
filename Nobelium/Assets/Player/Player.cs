@@ -1,9 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Player : MonoBehaviour, ICharacter
-{
+public class Player : MonoBehaviour, ICharacter {
     [Header("Inputs")]
     [SerializeField] private float horInput;
     [SerializeField] private float verInput;
@@ -19,42 +16,35 @@ public class Player : MonoBehaviour, ICharacter
     private HealthComponent healthComponent;
 
 
-    private void Awake()
-    {
+    private void Awake() {
         rb2d = GetComponent<Rigidbody2D>();
         createComponents();
         setStats();
     }
 
-    private void setStats()
-    {
+    private void setStats() {
         movementComponent.setSpeed(speed);
     }
 
-    private void createComponents()
-    {
+    private void createComponents() {
         movementComponent = new MovementComponent(rb2d);
         healthComponent = new HealthComponent(this);
     }
 
-    private void FixedUpdate()
-    {
+    private void FixedUpdate() {
         movementComponent.movement(horInput, verInput);
     }
 
-    public void setInputs(float horInput, float verInput)
-    {
+    public void setInputs(float horInput, float verInput) {
         this.horInput = horInput;
         this.verInput = verInput;
     }
 
-    public void die()
-    {
+    public void die() {
         GameManager.instance.gameOver();
     }
 
-    public HealthComponent GetHealthComponent()
-    {
+    public HealthComponent GetHealthComponent() {
         return healthComponent;
     }
 }

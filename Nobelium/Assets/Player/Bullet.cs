@@ -20,8 +20,8 @@ public class Bullet : MonoBehaviour {
 
     void Start() {
         rb2d = GetComponent<Rigidbody2D>();
-        createComponents();
-        setStats();
+        //createComponents();
+        //setStats();
         Destroy(gameObject, deathTime);
     }
 
