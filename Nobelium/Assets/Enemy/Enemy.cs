@@ -1,18 +1,17 @@
 ﻿using UnityEngine;
 
-public class Enemy : MonoBehaviour, ICharacter {
-    [Header("Stats")] 
-    [SerializeField] private float speed;
+public class Enemy : MonoBehaviour, IEnemy {
+    [Header("Stats")] [SerializeField] private float speed;
     [SerializeField] private float health;
+    [SerializeField] private float secondPhaseHealthEnterPercentage;
+    [SerializeField] private float secondPhaseHealthEnter;
 
-    [Header("References")] 
-    [SerializeField]
+    [Header("References")] [SerializeField]
     private GameObject boxPrefab;
 
     [SerializeField] private BoxPoints boxPoints;
 
-    [Header("Cooldowns")] 
-    [SerializeField] private float boxCooldown = 6f;
+    [Header("Cooldowns")] [SerializeField] private float boxCooldown = 6f;
     [SerializeField] private float boxTimer = 0f;
 
     private Rigidbody2D rb2d;
@@ -20,10 +19,11 @@ public class Enemy : MonoBehaviour, ICharacter {
     private MovementComponent movementComponent;
 
 
-    private void Start() {
+    private void OnEnable() {
         rb2d = GetComponent<Rigidbody2D>();
         createComponents();
         setStats();
+        calculateSecondPhaseEnter();
     }
 
     private void FixedUpdate() {
@@ -49,9 +49,11 @@ public class Enemy : MonoBehaviour, ICharacter {
                 for (int i = 0; i < random; i++) {
                     Instantiate(boxPrefab, boxPoints.getRandomPosition(), transform.rotation);
                 }
+
                 boxTimer = 0f;
             }
         }
+
         boxTimer += Time.deltaTime;
     }
 
@@ -60,7 +62,22 @@ public class Enemy : MonoBehaviour, ICharacter {
         Destroy(gameObject);
     }
 
+    public void updateHealth(float health) {
+        this.health = health;
+        if (this.health <= secondPhaseHealthEnter) {
+            
+        }
+    }
+
     public HealthComponent GetHealthComponent() {
         return healthComponent;
+    }
+
+    public void setBoxPoints(BoxPoints boxPoints) {
+        this.boxPoints = boxPoints;
+    }
+
+    private float calculateSecondPhaseEnter() {
+        secondPhaseHealthEnter = health * secondPhaseHealthEnterPercentage / 100f;
     }
 }

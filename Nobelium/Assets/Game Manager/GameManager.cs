@@ -2,6 +2,9 @@
 using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour {
+
+    [SerializeField] private GameObject enemy;
+    
     public static GameManager instance = null;
     private GameObject player;
 
@@ -17,7 +20,7 @@ public class GameManager : MonoBehaviour {
             Destroy(gameObject);
         }
         DontDestroyOnLoad(gameObject);
-        findPlayer();
+        EnemyFabric.instance.spawnEnemy();
     }
 
 

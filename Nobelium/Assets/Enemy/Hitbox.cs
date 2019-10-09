@@ -82,6 +82,10 @@ public class Hitbox : MonoBehaviour, ICharacter {
         Destroy(gameObject);
     }
 
+    public void updateHealth(float health) {
+        this.health = health;
+    }
+
     public HealthComponent GetHealthComponent() {
         return healthComponent;
     }

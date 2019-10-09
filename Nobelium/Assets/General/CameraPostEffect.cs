@@ -1,8 +1,6 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-public class CameraPostEffect : MonoBehaviour
-{
+public class CameraPostEffect : MonoBehaviour {
     // Transform of the camera to shake. Grabs the gameObject's transform
     // if null.
     private Transform camTransform;
@@ -18,26 +16,21 @@ public class CameraPostEffect : MonoBehaviour
 
     Vector3 originalPos;
 
-    void Awake()
-    {
-        if (camTransform == null)
-        {
+    void Awake() {
+        if (camTransform == null) {
             camTransform = GetComponent(typeof(Transform)) as Transform;
         }
     }
 
-    void OnEnable()
-    {
+    void OnEnable() {
         originalPos = camTransform.localPosition;
     }
 
-    void Update()
-    {
-
-        float shakeAmount = CommonMethods.getValueInRange(AudioPeer.getAudioBandBuffer(0),minShakeAmount, maxShakeAmount);
+    void Update() {
+        float shakeAmount =
+            CommonMethods.getValueInRange(AudioPeer.getAudioBandBuffer(0), minShakeAmount, maxShakeAmount);
         camTransform.localPosition = originalPos + Random.insideUnitSphere * shakeAmount;
 
         shakeDuration -= Time.deltaTime * decreaseFactor;
-        
     }
 }

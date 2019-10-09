@@ -1,13 +1,12 @@
 ﻿using UnityEngine;
 
 public class Player : MonoBehaviour, ICharacter {
-    [Header("Inputs")]
-    [SerializeField] private float horInput;
+    [Header("Inputs")] [SerializeField] private float horInput;
     [SerializeField] private float verInput;
 
 
-    [Header("Stats")]
-    [SerializeField] private float speed;
+    [Header("Stats")] [SerializeField] private float speed;
+    [SerializeField] private float health;
 
 
     private Rigidbody2D rb2d;
@@ -42,6 +41,10 @@ public class Player : MonoBehaviour, ICharacter {
 
     public void die() {
         GameManager.instance.gameOver();
+    }
+
+    public void updateHealth(float health) {
+        this.health = health;
     }
 
     public HealthComponent GetHealthComponent() {

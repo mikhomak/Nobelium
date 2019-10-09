@@ -11,6 +11,10 @@ public class Hurtbox : MonoBehaviour, IHurtbox {
         healthComponent = character.GetHealthComponent();
     }
 
+    public void deactivate() {
+        activated = false;
+    }
+
     public void activate() {
         activated = true;
     }
@@ -19,11 +23,7 @@ public class Hurtbox : MonoBehaviour, IHurtbox {
         GameManager.instance.addListenerToMainEvents(deactivate, activate);
     }
 
-    public void deactivate() {
-        activated = false;
-    }
-
     public void takeDamage(float damage) {
-        healthComponent.takeDamage(damage * damageMultiplier);
+        healthComponent?.takeDamage(damage * damageMultiplier);
     }
 }
