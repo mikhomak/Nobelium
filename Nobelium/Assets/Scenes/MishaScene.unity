@@ -915,5 +915,20 @@ PrefabInstance:
       propertyPath: coolor.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4485736916943314087, guid: 92f0a7f3b29d6204598b92c83105d233,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7895896151367813250, guid: 92f0a7f3b29d6204598b92c83105d233,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707772764870789771, guid: 92f0a7f3b29d6204598b92c83105d233,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92f0a7f3b29d6204598b92c83105d233, type: 3}

@@ -5,14 +5,15 @@ public class GameManager : MonoBehaviour {
     public static GameManager instance = null;
     private GameObject player;
 
-    private UnityEvent pauseEvent = new UnityEvent();
-    private UnityEvent resumeEvent = new UnityEvent();
+    private readonly UnityEvent pauseEvent = new UnityEvent();
+    private readonly UnityEvent resumeEvent = new UnityEvent();
 
 
     void Awake() {
         if (instance == null) {
             instance = this;
-        } else if (instance != this) {
+        }
+        else if (instance != this) {
             Destroy(gameObject);
         }
         DontDestroyOnLoad(gameObject);
@@ -23,7 +24,7 @@ public class GameManager : MonoBehaviour {
     public void addListenerToMainEvents(UnityAction pauseAction, UnityAction resumeAction) {
         Debug.Log("KSK" + pauseAction.Target);
         pauseEvent.AddListener(pauseAction);
-        pauseEvent.AddListener(resumeAction);
+        resumeEvent.AddListener(resumeAction);
     }
 
     public void pauseGame() {
@@ -35,12 +36,10 @@ public class GameManager : MonoBehaviour {
     }
 
     public void gameOver() {
-
     }
 
     private void findPlayer() {
         player = GameObject.FindGameObjectWithTag("Player");
-
     }
 
     public Vector3 getPlayerPos(GameObject player) {

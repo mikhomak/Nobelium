@@ -1,15 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Hurtbox : MonoBehaviour, IHurtbox
-{
+public class Hurtbox : MonoBehaviour, IHurtbox {
     private ICharacter character;
     private HealthComponent healthComponent;
     [SerializeField] private bool activated = true;
     [SerializeField] private float damageMultiplier = 1;
 
-    private void Start(){
+    private void Start() {
         character = GetComponentInParent<ICharacter>();
         healthComponent = character.GetHealthComponent();
     }

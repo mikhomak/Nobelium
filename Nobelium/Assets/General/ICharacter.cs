@@ -1,11 +1,5 @@
-﻿
-
-
-public interface ICharacter 
-{
-
+﻿public interface ICharacter {
     void die();
 
     HealthComponent GetHealthComponent();
-
 }

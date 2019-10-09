@@ -1,28 +1,26 @@
 ﻿using UnityEngine;
-using Random = UnityEngine.Random;
 
 public class Enemy : MonoBehaviour, ICharacter {
-    [Header("Stats")]
+    [Header("Stats")] 
     [SerializeField] private float speed;
     [SerializeField] private float health;
-    [Header("References")]
-    [SerializeField] private GameObject boxPrefab;
+
+    [Header("References")] 
+    [SerializeField]
+    private GameObject boxPrefab;
+
     [SerializeField] private BoxPoints boxPoints;
 
-    [Header("Cooldowns")]
+    [Header("Cooldowns")] 
     [SerializeField] private float boxCooldown = 6f;
     [SerializeField] private float boxTimer = 0f;
 
-
     private Rigidbody2D rb2d;
-
-
     private HealthComponent healthComponent;
     private MovementComponent movementComponent;
 
 
-    
-    private void Awake() {
+    private void Start() {
         rb2d = GetComponent<Rigidbody2D>();
         createComponents();
         setStats();

@@ -1,9 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class Hitbox : MonoBehaviour, ICharacter
-{
+public class Hitbox : MonoBehaviour, ICharacter {
     [SerializeField] private float damage;
     [SerializeField] private float health = 20f;
     [SerializeField] private float actualDamage;
@@ -17,15 +15,15 @@ public class Hitbox : MonoBehaviour, ICharacter
     [SerializeField] private float shootTimer;
 
 
-    [Header("References")]
-    [SerializeField] private ParticleSystem deathEffectPrefab;
+    [Header("References")] [SerializeField]
+    private ParticleSystem deathEffectPrefab;
+
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private List<Transform> bulletPoints;
     [SerializeField] private List<Vector3> bulletDirection = new List<Vector3>();
     private HealthComponent healthComponent;
 
-    private void Awake()
-    {
+    private void Awake() {
         setComponents();
         setStats();
     }
@@ -38,9 +36,8 @@ public class Hitbox : MonoBehaviour, ICharacter
         healthComponent.setHealth(health);
     }
 
-    private void Start()
-    {
-        float lifeTime = Random.Range(minLifeTime,maxLifeTime);
+    private void Start() {
+        float lifeTime = Random.Range(minLifeTime, maxLifeTime);
         Destroy(gameObject, lifeTime);
         shootTime = Random.Range(minShootTime, maxShootTime);
         bulletDirection.Add(transform.up * -1f);
@@ -49,53 +46,43 @@ public class Hitbox : MonoBehaviour, ICharacter
         bulletDirection.Add(transform.right);
     }
 
-    private void FixedUpdate()
-    {
+    private void FixedUpdate() {
         float scale = CommonMethods.getValueInRange(AudioPeer.getAudioBandBuffer(5), minScale, maxScale);
-        transform.localScale = new Vector2(scale,scale);
+        transform.localScale = new Vector2(scale, scale);
         actualDamage = scale * damage;
-        if(shootTimer> shootTime)
-        {
+        if (shootTimer > shootTime) {
             shoot();
             shootTimer = 0f;
         }
-        shootTimer += Time.deltaTime;
 
+        shootTimer += Time.deltaTime;
     }
 
-    private void shoot()
-    {
+    private void shoot() {
         if (bulletPoints.Count > 4)
             return;
-        for(int i = 0; i < bulletPoints.Count; i++)
-        {
+        for (int i = 0; i < bulletPoints.Count; i++) {
             GameObject bulletGO = Instantiate(bulletPrefab, bulletPoints[i].transform.position, transform.rotation);
             EnemyBullet bullet = bulletGO.GetComponent<EnemyBullet>();
             bullet.setDirection(bulletDirection[i]);
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.gameObject.layer == CommonMethods.HURTBOX_PLAYER)
-        {
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.gameObject.layer == CommonMethods.HURTBOX_PLAYER) {
             collision.GetComponent<IHurtbox>().takeDamage(actualDamage);
         }
     }
 
-    private void OnDestroy()
-    {
+    private void OnDestroy() {
         Instantiate(deathEffectPrefab, transform.position, transform.rotation);
     }
 
-    public void die()
-    {
+    public void die() {
         Destroy(gameObject);
     }
 
-    public HealthComponent GetHealthComponent()
-    {
+    public HealthComponent GetHealthComponent() {
         return healthComponent;
     }
-
 }

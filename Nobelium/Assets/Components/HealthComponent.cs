@@ -32,6 +32,6 @@
     }
 
     public void addToListeners() {
-        GameManager.instance.addListenerToMainEvents(deactivate, activate);
+        //GameManager.instance.addListenerToMainEvents(deactivate, activate);
     }
 }

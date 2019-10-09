@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="B:\Documents\Unity Projects\Nobelium\Nobelium" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Auido Visualization" t="Include">
+          <e p="AudioPeer.cs" t="Include" />
+          <e p="MusicCube.cs" t="Include" />
+          <e p="SpawnCubes.cs" t="Include" />
+        </e>
+        <e p="Background" t="Include">
+          <e p="AudioCube.cs" t="Include" />
+          <e p="Background.cs" t="Include" />
+        </e>
+        <e p="Components" t="Include">
+          <e p="HealthComponent.cs" t="Include" />
+          <e p="Hurtbox.cs" t="Include" />
+          <e p="IComponent.cs" t="Include" />
+          <e p="IHurtbox.cs" t="Include" />
+        </e>
+        <e p="Enemy" t="Include">
+          <e p="BodyHitbox.cs" t="Include" />
+          <e p="BoxPoints.cs" t="Include" />
+          <e p="Enemy.cs" t="Include" />
+          <e p="EnemyBullet.cs" t="Include" />
+          <e p="Hitbox.cs" t="Include" />
+        </e>
+        <e p="Game Manager" t="Include">
+          <e p="GameManager.cs" t="Include" />
+        </e>
+        <e p="General" t="Include">
+          <e p="CameraPostEffect.cs" t="Include" />
+          <e p="CommonMethods.cs" t="Include" />
+          <e p="ICharacter.cs" t="Include" />
+          <e p="PSAutoDestroy.cs" t="Include" />
+        </e>
+        <e p="Player" t="Include">
+          <e p="Bullet.cs" t="Include" />
+          <e p="InputController.cs" t="Include" />
+          <e p="MovementComponent.cs" t="Include" />
+          <e p="Player.cs" t="Include" />
+          <e p="Weapon.cs" t="Include" />
+        </e>
+        <e p="UI" t="Include">
+          <e p="MainUI.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Nobelium.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+    <e p="C:\Users\Misha\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Nobelium.-1459287006.00" t="ExcludeRecursive" />
+  </component>
+</project>
