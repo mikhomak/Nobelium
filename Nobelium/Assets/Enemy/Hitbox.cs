@@ -40,10 +40,7 @@ public class Hitbox : MonoBehaviour, ICharacter {
         float lifeTime = Random.Range(minLifeTime, maxLifeTime);
         Destroy(gameObject, lifeTime);
         shootTime = Random.Range(minShootTime, maxShootTime);
-        bulletDirection.Add(transform.up * -1f);
-        bulletDirection.Add(transform.up);
-        bulletDirection.Add(transform.right * -1f);
-        bulletDirection.Add(transform.right);
+
     }
 
     private void FixedUpdate() {
@@ -62,12 +59,21 @@ public class Hitbox : MonoBehaviour, ICharacter {
         if (bulletPoints.Count > 4)
             return;
         for (int i = 0; i < bulletPoints.Count; i++) {
+            setDirections();
             GameObject bulletGO = Instantiate(bulletPrefab, bulletPoints[i].transform.position, transform.rotation);
             EnemyBullet bullet = bulletGO.GetComponent<EnemyBullet>();
             bullet.setDirection(bulletDirection[i]);
         }
     }
 
+    private void setDirections() {
+        bulletDirection.Clear();
+        bulletDirection.Add(transform.up * -1f);
+        bulletDirection.Add(transform.up);
+        bulletDirection.Add(transform.right * -1f);
+        bulletDirection.Add(transform.right);
+    }
+    
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.layer == CommonMethods.HURTBOX_PLAYER) {
             collision.GetComponent<IHurtbox>().takeDamage(actualDamage);

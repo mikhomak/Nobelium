@@ -1,13 +1,14 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
 
 public class Enemy : MonoBehaviour, IEnemy {
     [Header("Stats")] [SerializeField] private float speed;
     [SerializeField] private float health;
-    [SerializeField] private float secondPhaseHealthEnterPercentage;
-    [SerializeField] private float secondPhaseHealthEnter;
+    [SerializeField] private List<Phase> phases;
+    [SerializeField] private int currentPhase = 0;
 
-    [Header("References")] [SerializeField]
-    private GameObject boxPrefab;
+    [Header("References")] 
 
     [SerializeField] private BoxPoints boxPoints;
 
@@ -23,7 +24,9 @@ public class Enemy : MonoBehaviour, IEnemy {
         rb2d = GetComponent<Rigidbody2D>();
         createComponents();
         setStats();
-        calculateSecondPhaseEnter();
+        phases.ForEach(e => e.calculateHealthEntrance(health));
+        phases = phases.OrderBy(e => e.getEnterHealth()).ToList();
+        Debug.Log(phases);
     }
 
     private void FixedUpdate() {
@@ -47,7 +50,7 @@ public class Enemy : MonoBehaviour, IEnemy {
                 int random = Random.Range(4, boxPoints.getMaxPoints() - 1);
                 boxPoints.updatePointsTaken();
                 for (int i = 0; i < random; i++) {
-                    Instantiate(boxPrefab, boxPoints.getRandomPosition(), transform.rotation);
+                    EnemyFabric.instance.spawnCubes(boxPoints.getRandomPosition(), transform.rotation);
                 }
 
                 boxTimer = 0f;
@@ -64,8 +67,10 @@ public class Enemy : MonoBehaviour, IEnemy {
 
     public void updateHealth(float health) {
         this.health = health;
-        if (this.health <= secondPhaseHealthEnter) {
-            
+        if (phases.Count > 0 && phases.First().getEnterHealth() >= health) {
+            EnemyFabric.instance.changeCurrentPhase(++currentPhase);
+            phases.RemoveAt(0);
+            Debug.Log("Changed phase");
         }
     }
 
@@ -77,7 +82,18 @@ public class Enemy : MonoBehaviour, IEnemy {
         this.boxPoints = boxPoints;
     }
 
-    private float calculateSecondPhaseEnter() {
-        secondPhaseHealthEnter = health * secondPhaseHealthEnterPercentage / 100f;
+    [System.Serializable]
+    private class Phase {
+        public float enterPercentageHealth;
+        private float enterHealth;
+
+        public float getEnterHealth() {
+            return enterHealth;
+        }
+
+        public float calculateHealthEntrance(float maxHealth) {
+            enterHealth = maxHealth * enterPercentageHealth / 100f;
+            return enterHealth;
+        }
     }
 }

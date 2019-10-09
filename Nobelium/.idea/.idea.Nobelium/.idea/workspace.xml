@@ -12,36 +12,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game Manager/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://B:/Programs/Unity/2020.1.0a3/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/InputModules/BaseInputModule.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/599589BF-4CE2-4890-9B8A-14CBE4A2034E/e3/1d24f770/Delegate.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Player/MovementComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82B7978F-F068-4A90-9887-130F51AEE190/f1/0cd8207c/UnityEvent.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://B:/Programs/Unity/2020.1.0a3/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5BAB1A3A-C70C-4024-AFD9-BC9427B3A6A7/28/f7c625a5/BuildPipelineInterfaces.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Player/Player.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/General/CameraPostEffect.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/General/ICharacter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Enemy/EnemyFabric.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82B7978F-F068-4A90-9887-130F51AEE190/c1/7f340793/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/599589BF-4CE2-4890-9B8A-14CBE4A2034E/b3/1a98efc9/NullReferenceException.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/599589BF-4CE2-4890-9B8A-14CBE4A2034E/99/5740d224/Environment.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Background/AudioCube.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Enemy/BodyHitbox.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/599589BF-4CE2-4890-9B8A-14CBE4A2034E/c9/3b52f757/SystemException.cs" root0="SKIP_HIGHLIGHTING" />
@@ -49,33 +31,56 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/599589BF-4CE2-4890-9B8A-14CBE4A2034E/c0/5bafdf50/Exception.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Enemy/BoxPoints.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Enemy/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Enemy/EnemyBullet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Enemy/Hitbox.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/599589BF-4CE2-4890-9B8A-14CBE4A2034E/e3/1d24f770/Delegate.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Player/MovementComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82B7978F-F068-4A90-9887-130F51AEE190/f1/0cd8207c/UnityEvent.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://B:/Programs/Unity/2020.1.0a3/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Player/Player.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/General/CameraPostEffect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/General/ICharacter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Enemy/EnemyFabric.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Background/AudioCube.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Components/Hurtbox.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Components/IHurtbox.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Enemy/IEnemy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Enemy/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Components/HealthComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Enemy/EnemyBullet.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Enemy/Hitbox.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Enemy/BoxPoints.cs" />
         <option value="$PROJECT_DIR$/Assets/Enemy/BodyHitbox.cs" />
         <option value="$PROJECT_DIR$/Assets/Enemy/EnemyBullet.cs" />
         <option value="$PROJECT_DIR$/Assets/Components/IHurtbox.cs" />
         <option value="$PROJECT_DIR$/Assets/General/CameraPostEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Enemy/IEnemy.cs" />
-        <option value="$PROJECT_DIR$/Assets/Game Manager/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Enemy/EnemyFabric.cs" />
         <option value="$PROJECT_DIR$/Assets/Background/Background.cs" />
         <option value="$PROJECT_DIR$/Assets/General/ICharacter.cs" />
         <option value="$PROJECT_DIR$/Assets/Player/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Components/HealthComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Enemy/Hitbox.cs" />
         <option value="$PROJECT_DIR$/Assets/Components/Hurtbox.cs" />
+        <option value="$PROJECT_DIR$/Assets/Enemy/BoxPoints.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game Manager/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game Manager/PhaseController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game Manager/PhaseManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Enemy/PhaseManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Enemy/EnemyPhaseManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Enemy/EnemyFabric.cs" />
         <option value="$PROJECT_DIR$/Assets/Enemy/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Enemy/Hitbox.cs" />
       </list>
     </option>
   </component>
@@ -86,7 +91,7 @@
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -126,7 +131,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1570604311062</updated>
-      <workItem from="1570604324079" duration="7060000" />
+      <workItem from="1570604324079" duration="11527000" />
     </task>
     <servers />
   </component>
@@ -158,13 +163,13 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Enemy/Enemy.cs</url>
-          <line>33</line>
+          <line>36</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Enemy/Enemy.cs" initialLine="33">
             <startOffsets>
-              <option value="954" />
+              <option value="1050" />
             </startOffsets>
             <endOffsets>
-              <option value="998" />
+              <option value="1094" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="11" />

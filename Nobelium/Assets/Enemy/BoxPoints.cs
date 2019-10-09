@@ -13,6 +13,7 @@ public class BoxPoints : MonoBehaviour {
         for (int i = 0; i < transform.childCount; i++) {
             points.Add(new Point(transform.GetChild(i).transform.position, false));
         }
+
         maxPoints = transform.childCount;
     }
 

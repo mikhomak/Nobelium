@@ -659,6 +659,18 @@ PrefabInstance:
       propertyPath: boxPoints
       value: 
       objectReference: {fileID: 288698984}
+    - target: {fileID: 6652586281476077250, guid: 3f18a0b8dc9ec2d4ab127dee1fefb198,
+        type: 3}
+      propertyPath: cubePhase1
+      value: 
+      objectReference: {fileID: 6181885351586379621, guid: eb86bbddc0d8b2e4d9bd0b89d09b0c94,
+        type: 3}
+    - target: {fileID: 6652586281476077250, guid: 3f18a0b8dc9ec2d4ab127dee1fefb198,
+        type: 3}
+      propertyPath: cubePhase2
+      value: 
+      objectReference: {fileID: 6181885351586379621, guid: b48e4942eec18c94e8597446d85d8ca8,
+        type: 3}
     - target: {fileID: 8731616589055859233, guid: 3f18a0b8dc9ec2d4ab127dee1fefb198,
         type: 3}
       propertyPath: m_Name

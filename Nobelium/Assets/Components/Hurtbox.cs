@@ -24,6 +24,9 @@ public class Hurtbox : MonoBehaviour, IHurtbox {
     }
 
     public void takeDamage(float damage) {
+        if (healthComponent == null) {
+            Debug.Log("Health Component is null at" + character);
+        }
         healthComponent?.takeDamage(damage * damageMultiplier);
     }
 }
