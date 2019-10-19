@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour {
@@ -20,9 +21,12 @@ public class GameManager : MonoBehaviour {
         }
 
         DontDestroyOnLoad(gameObject);
-        EnemyFabric.instance.spawnEnemy();
     }
 
+
+    private void Start() {
+        EnemyFabric.instance.spawnEnemy();
+    }
 
     public void addListenerToMainEvents(UnityAction pauseAction, UnityAction resumeAction) {
         pauseEvent.AddListener(pauseAction);

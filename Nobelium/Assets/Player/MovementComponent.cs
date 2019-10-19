@@ -11,7 +11,7 @@ public class MovementComponent : IComponent {
 
     public MovementComponent(Rigidbody2D rb2d) {
         this.rb2d = rb2d;
-        addToListeners();
+        //addToListeners();
     }
 
     public void movement(float horInput, float verInput) {

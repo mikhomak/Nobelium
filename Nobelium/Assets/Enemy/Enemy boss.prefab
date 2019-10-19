@@ -286,8 +286,8 @@ MonoBehaviour:
   health: 10000
   phases:
   - enterPercentageHealth: 100
-  - enterPercentageHealth: 99
-  - enterPercentageHealth: 98
+  - enterPercentageHealth: 60
+  - enterPercentageHealth: 30
   currentPhase: 0
   boxPoints: {fileID: 0}
   boxCooldown: 4.5

@@ -49,6 +49,8 @@ public class Hitbox : MonoBehaviour, ICharacter {
         float lifeTime = Random.Range(minLifeTime, maxLifeTime);
         Destroy(gameObject, lifeTime);
         shootTime = Random.Range(minShootTime, maxShootTime);
+        direction = new Vector2(Random.Range(transform.right.x, transform.right.x * -1),
+            Random.Range(transform.up.y, transform.up.y * -1f));
     }
 
     private void FixedUpdate() {
@@ -62,7 +64,7 @@ public class Hitbox : MonoBehaviour, ICharacter {
 
         shootTimer += Time.deltaTime;
         if (phase3) {
-            direction = new Vector2(Random.Range(-1, 1), Random.Range(-1, 1));
+            
             movementComponent.movement(direction.x, direction.y);
             movementComponent.setSpeed(CommonMethods.getValueInRange(AudioPeer.getAudioBandBuffer(5), minSpeed,
                 maxSpeed));

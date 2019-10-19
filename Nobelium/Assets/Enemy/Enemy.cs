@@ -45,7 +45,7 @@ public class Enemy : MonoBehaviour, IEnemy {
 
 
     private void createBoxes() {
-        if (AudioPeer.getAudioBandBuffer(0) > 0.1f) {
+        if (AudioPeer.getAudioBandBuffer(0) > 0.3f) {
             if (boxTimer > boxCooldown) {
                 int random = Random.Range(4, boxPoints.getMaxPoints() - 1);
                 boxPoints.updatePointsTaken();

@@ -7,7 +7,7 @@
 
     public HealthComponent(ICharacter character) {
         this.character = character;
-        addToListeners();
+        //addToListeners();
     }
 
     public void takeDamage(float damage) {

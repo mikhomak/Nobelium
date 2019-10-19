@@ -204,11 +204,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 0272383efc2c3bb4b811331ad1de66d3, type: 3}
+      objectReference: {fileID: 8300000, guid: b6f1ac5304453f146b3221fa1ea66690, type: 3}
     - target: {fileID: 8759707968186821692, guid: 310bccda38d0f5141a3e32ae5d574821,
         type: 3}
       propertyPath: m_Volume
-      value: 0.027
+      value: 0.734
+      objectReference: {fileID: 0}
+    - target: {fileID: 8759707968186821692, guid: 310bccda38d0f5141a3e32ae5d574821,
+        type: 3}
+      propertyPath: m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8759707968186821692, guid: 310bccda38d0f5141a3e32ae5d574821,
+        type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8759707968186821692, guid: 310bccda38d0f5141a3e32ae5d574821,
+        type: 3}
+      propertyPath: BypassEffects
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8759707968186821692, guid: 310bccda38d0f5141a3e32ae5d574821,
+        type: 3}
+      propertyPath: BypassListenerEffects
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8759707968186821692, guid: 310bccda38d0f5141a3e32ae5d574821,
+        type: 3}
+      propertyPath: BypassReverbZones
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8759707968186821692, guid: 310bccda38d0f5141a3e32ae5d574821,
+        type: 3}
+      propertyPath: Priority
+      value: 160
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 310bccda38d0f5141a3e32ae5d574821, type: 3}
@@ -253,7 +283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shakeDuration: 0
   minShakeAmount: 0
-  maxShakeAmount: 0.12
+  maxShakeAmount: 0.14
   decreaseFactor: 1
 --- !u!20 &519420031
 Camera:
