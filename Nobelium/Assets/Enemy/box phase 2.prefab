@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 20
   m_Sprite: {fileID: 21300000, guid: 30049f6504d68d44c9a2476f60ab6b60, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.3283699, g: 0.7924528, b: 0.2728729, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -327,10 +327,14 @@ MonoBehaviour:
   maxScale: 0.2
   minLifeTime: 2
   maxLifeTime: 4
-  minShootTime: 0.7
-  maxShootTime: 1.7
+  minShootTime: 0.4
+  maxShootTime: 1.4
   shootTime: 0
   shootTimer: 0
+  phase3: 0
+  minSpeed: 0.09
+  maxSpeed: 0.4
+  direction: {x: 0, y: 0}
   deathEffectPrefab: {fileID: 3589657108835014577, guid: d07ab5d488eaa3641a17c622dcdc9072,
     type: 3}
   bulletPrefab: {fileID: 7930417353760584102, guid: 440216d8aedc5e347b8bf4329571cfa4,

@@ -13,7 +13,10 @@ public class Hitbox : MonoBehaviour, ICharacter {
     [SerializeField] private float maxShootTime = 1.7f;
     [SerializeField] private float shootTime;
     [SerializeField] private float shootTimer;
-
+    [Header("Movement")] [SerializeField] private bool phase3 = false;
+    [SerializeField] private float minSpeed = 0.09f;
+    [SerializeField] private float maxSpeed = 0.4f;
+    [SerializeField] private Vector2 direction;
 
     [Header("References")] [SerializeField]
     private ParticleSystem deathEffectPrefab;
@@ -22,14 +25,20 @@ public class Hitbox : MonoBehaviour, ICharacter {
     [SerializeField] private List<Transform> bulletPoints;
     [SerializeField] private List<Vector3> bulletDirection = new List<Vector3>();
     private HealthComponent healthComponent;
+    private MovementComponent movementComponent;
+    private Rigidbody2D rb2d;
 
     private void Awake() {
+        rb2d = GetComponent<Rigidbody2D>();
         setComponents();
         setStats();
     }
 
     private void setComponents() {
         healthComponent = new HealthComponent(this);
+        if (phase3) {
+            movementComponent = new MovementComponent(rb2d);
+        }
     }
 
     private void setStats() {
@@ -40,7 +49,6 @@ public class Hitbox : MonoBehaviour, ICharacter {
         float lifeTime = Random.Range(minLifeTime, maxLifeTime);
         Destroy(gameObject, lifeTime);
         shootTime = Random.Range(minShootTime, maxShootTime);
-
     }
 
     private void FixedUpdate() {
@@ -53,6 +61,12 @@ public class Hitbox : MonoBehaviour, ICharacter {
         }
 
         shootTimer += Time.deltaTime;
+        if (phase3) {
+            direction = new Vector2(Random.Range(-1, 1), Random.Range(-1, 1));
+            movementComponent.movement(direction.x, direction.y);
+            movementComponent.setSpeed(CommonMethods.getValueInRange(AudioPeer.getAudioBandBuffer(5), minSpeed,
+                maxSpeed));
+        }
     }
 
     private void shoot() {
@@ -73,7 +87,7 @@ public class Hitbox : MonoBehaviour, ICharacter {
         bulletDirection.Add(transform.right * -1f);
         bulletDirection.Add(transform.right);
     }
-    
+
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.layer == CommonMethods.HURTBOX_PLAYER) {
             collision.GetComponent<IHurtbox>().takeDamage(actualDamage);

@@ -5,6 +5,7 @@ public class EnemyFabric : MonoBehaviour {
     [SerializeField] private BoxPoints boxPoints;
     [SerializeField] private GameObject cubePhase1;
     [SerializeField] private GameObject cubePhase2;
+    [SerializeField] private GameObject cubePhase3;
     [SerializeField] private int currentPhase;
     public static EnemyFabric instance;
 
@@ -36,6 +37,9 @@ public class EnemyFabric : MonoBehaviour {
                 break;
             case 2:
                 Instantiate(cubePhase2, position, rotation);
+                break;
+            case 3:
+                Instantiate(cubePhase3, position, rotation);
                 break;
         }
     }

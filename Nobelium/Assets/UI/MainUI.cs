@@ -4,23 +4,28 @@ using UnityEngine;
 
 public class MainUI : MonoBehaviour
 {
-    public static MainUI instnace = null;
-
+    public static MainUI instance = null;
+    [SerializeField] private GameObject pauseButton;
+    [SerializeField] private GameObject resumeButton;
     private void Awake()
     {
-        if (instnace == null)
-            instnace = this;
-        else if (instnace != null)
+        if (instance == null)
+            instance = this;
+        else if (instance != null)
             Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
     }
 
 
     public void pause() {
+        pauseButton.SetActive(false);
+        resumeButton.SetActive(true);
         GameManager.instance.pauseGame();
     }
 
     public void resume() {
+        pauseButton.SetActive(true);
+        resumeButton.SetActive(false);
         GameManager.instance.resumeGame();
     }
 

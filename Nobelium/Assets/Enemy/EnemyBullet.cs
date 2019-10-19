@@ -43,6 +43,8 @@ public class EnemyBullet : MonoBehaviour, IComponent {
         if (collision.gameObject.layer == CommonMethods.HURTBOX_PLAYER) {
             collision.GetComponent<IHurtbox>().takeDamage(actualDamage);
             Destroy(gameObject);
+        }else if (collision.gameObject.layer == CommonMethods.HURTBOX && collision.gameObject.GetComponentInParent<Hitbox>() == null) {
+            Destroy(gameObject);
         }
     }
 

@@ -1,7 +1,77 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f06282ae-9ac0-4512-aa35-39ecf359b53c" name="Default Changelist" comment="" />
+    <list default="true" id="f06282ae-9ac0-4512-aa35-39ecf359b53c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Nobelium/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Nobelium/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Nobelium/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Nobelium/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Auido Visualization/AudioPeer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Auido Visualization/AudioPeer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy/Enemy boss.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy/Enemy boss.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy/EnemyBullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy/EnemyBullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy/EnemyFabric.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy/EnemyFabric.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy/Hitbox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy/Hitbox.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy/box phase 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy/box phase 2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Manager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Manager/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MishaScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MishaScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/MainUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/MainUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/UI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/UI.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ArtifactDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/02/029f600561f913d4795a0a2670b81774" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/04/041d4db3f63c8bade03726946a9bbba5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/13/131f22037891f9c3cf33c9b2edfa1164" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/1e/1e54e68c05bffb06422ef131137e9d85" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/20/20b9ffa3dc4c6d73b93b509cf6cafd58" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/2c/2ccb78b389ee566c7d0e2667e4f21070" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/32/3229473d776d4a31d458db150926dc10" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/34/34f2a42e559f3c92baa14e9494f57dc0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/39/393a8950e3bafc5187edda0aa8165201" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/3d/3d56e67ff51e3f3389f86ea229525347" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/3f/3f6141ed2d3f745d4bd1d839dd00a6eb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/41/414839986869c305800500283a6f7d8a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/49/49f05fb94c5c57e9b3c1c8a75c5cf89a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/55/55ecdf629f9f40732d8b13acdefff03a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/61/615a6541d0ed882c20c90119c191c126" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/61/619d10b20898f46f7afbc55ad74f123d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/64/64bce6b6290f46630119ae94d5a17e4b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/6f/6fc7fdbb77f87c2ec39be086cfad64bb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/72/728d457b5ecba96916ddfbcac9af80f2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/77/7717c7735d486c8af67b1027f8252fa9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/82/82438085c3742f3c438f2e9012e3f597" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/84/848d930872c561d46f7270dd08aad9c4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/88/885fe3b34cd09d9e4f0c92b0cb73e727" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/89/89c5a9c815c62c4105818784eff80bab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/8a/8a273bc4b46f6fd15ce22cd1173455d3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/8d/8d065e272a7f759853ffb4672dd903f7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/8e/8ed6dc177db080a1762e75a6401298c5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/93/93bd95bdbea6bfc42eb0d0940df4eafb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/94/9496b5f17095b8c51fc4c567975e7ffd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/9b/9b2740704cce0e78b10e46dae3b29034" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/9c/9cb58c06e890eb35ab0c42e590f69157" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/ab/ab932fbf38623c36079388f379bdacb2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/ac/ac2d5eef5bd5a83b248bd3c5a82699cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/b8/b8483e106d1e4c33f0b7fc62d14e30a0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/bc/bc788c0b470b201a0c8e7b8db29024b5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/bd/bd92fb1f30f65334632cb8326ad4d304" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/c6/c6e1afb1bed7df6d9c726c69a328df84" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/c8/c856a8c486eae28e2a39b608430f9733" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/cb/cb86aa0405c197a9016c4a4e3ef3edb7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/cf/cf362963e0ca9b195f0895d18f30b20c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/d9/d90a3c4dbe34826d6d69fec848b9bc0e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/e2/e2d22239c811c9f34695ff25f7206c5f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/ee/ee4b71c9e539f6e813067638e80f64ca" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/f8/f8fb9ea82f687705fa0c01cecc50607a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/ff9d65-1a8cd8fffa96bfb4f8.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/ff9d65-1a8cd8fffa96bfb4f8.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/ff9d65-fcab83d0806eb7c4c8.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/ff9d65-fcab83d0806eb7c4c8.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/ff9d65-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/ff9d65-mainStage.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/4a43d6-1a8cd8fffa96bfb4f8.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/4a43d6-1a8cd8fffa96bfb4f8.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/4a43d6-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/4a43d6-mainStage.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,57 +83,40 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Game Manager/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Auido Visualization/AudioPeer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://B:/Programs/Unity/2020.1.0a3/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/InputModules/BaseInputModule.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5BAB1A3A-C70C-4024-AFD9-BC9427B3A6A7/28/f7c625a5/BuildPipelineInterfaces.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82B7978F-F068-4A90-9887-130F51AEE190/c1/7f340793/Transform.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/599589BF-4CE2-4890-9B8A-14CBE4A2034E/b3/1a98efc9/NullReferenceException.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/599589BF-4CE2-4890-9B8A-14CBE4A2034E/99/5740d224/Environment.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Enemy/BodyHitbox.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/599589BF-4CE2-4890-9B8A-14CBE4A2034E/c9/3b52f757/SystemException.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/599589BF-4CE2-4890-9B8A-14CBE4A2034E/c0/5bafdf50/Exception.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Enemy/BoxPoints.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Enemy/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Enemy/EnemyBullet.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Enemy/Hitbox.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/599589BF-4CE2-4890-9B8A-14CBE4A2034E/e3/1d24f770/Delegate.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Player/MovementComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82B7978F-F068-4A90-9887-130F51AEE190/f1/0cd8207c/UnityEvent.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Player/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://B:/Programs/Unity/2020.1.0a3/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5BAB1A3A-C70C-4024-AFD9-BC9427B3A6A7/28/f7c625a5/BuildPipelineInterfaces.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Player/Player.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82B7978F-F068-4A90-9887-130F51AEE190/c1/7f340793/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/General/CameraPostEffect.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/General/ICharacter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Enemy/EnemyFabric.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Enemy/MovinHitbox.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/599589BF-4CE2-4890-9B8A-14CBE4A2034E/b3/1a98efc9/NullReferenceException.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/UI/MainUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/599589BF-4CE2-4890-9B8A-14CBE4A2034E/99/5740d224/Environment.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Background/AudioCube.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Enemy/BodyHitbox.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/599589BF-4CE2-4890-9B8A-14CBE4A2034E/c9/3b52f757/SystemException.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/599589BF-4CE2-4890-9B8A-14CBE4A2034E/c0/5bafdf50/Exception.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Enemy/BoxPoints.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Components/Hurtbox.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Components/IHurtbox.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Enemy/IEnemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Enemy/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Components/HealthComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Enemy/EnemyBullet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Enemy/Hitbox.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Enemy/BodyHitbox.cs" />
-        <option value="$PROJECT_DIR$/Assets/Enemy/EnemyBullet.cs" />
         <option value="$PROJECT_DIR$/Assets/Components/IHurtbox.cs" />
         <option value="$PROJECT_DIR$/Assets/General/CameraPostEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Enemy/IEnemy.cs" />
@@ -73,13 +126,17 @@
         <option value="$PROJECT_DIR$/Assets/Components/HealthComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Components/Hurtbox.cs" />
         <option value="$PROJECT_DIR$/Assets/Enemy/BoxPoints.cs" />
-        <option value="$PROJECT_DIR$/Assets/Game Manager/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Game Manager/PhaseController.cs" />
         <option value="$PROJECT_DIR$/Assets/Game Manager/PhaseManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Enemy/PhaseManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Enemy/EnemyPhaseManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Enemy/EnemyFabric.cs" />
         <option value="$PROJECT_DIR$/Assets/Enemy/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Enemy/MovinHitbox.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game Manager/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Enemy/EnemyBullet.cs" />
+        <option value="$PROJECT_DIR$/Assets/UI/MainUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Auido Visualization/AudioPeer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Enemy/EnemyFabric.cs" />
         <option value="$PROJECT_DIR$/Assets/Enemy/Hitbox.cs" />
       </list>
     </option>
@@ -132,6 +189,9 @@
       <option name="presentableId" value="Default" />
       <updated>1570604311062</updated>
       <workItem from="1570604324079" duration="11527000" />
+      <workItem from="1571485271829" duration="572000" />
+      <workItem from="1571486170542" duration="135000" />
+      <workItem from="1571486444849" duration="5021000" />
     </task>
     <servers />
   </component>
@@ -145,7 +205,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

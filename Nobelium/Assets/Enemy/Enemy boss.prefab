@@ -286,9 +286,9 @@ MonoBehaviour:
   health: 10000
   phases:
   - enterPercentageHealth: 100
-  - enterPercentageHealth: 90
-  boxPrefab: {fileID: 6181885351586379621, guid: eb86bbddc0d8b2e4d9bd0b89d09b0c94,
-    type: 3}
+  - enterPercentageHealth: 99
+  - enterPercentageHealth: 98
+  currentPhase: 0
   boxPoints: {fileID: 0}
   boxCooldown: 4.5
   boxTimer: 0

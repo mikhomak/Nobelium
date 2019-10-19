@@ -2,9 +2,8 @@
 using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour {
-
     [SerializeField] private GameObject enemy;
-    
+
     public static GameManager instance = null;
     private GameObject player;
 
@@ -19,6 +18,7 @@ public class GameManager : MonoBehaviour {
         else if (instance != this) {
             Destroy(gameObject);
         }
+
         DontDestroyOnLoad(gameObject);
         EnemyFabric.instance.spawnEnemy();
     }
@@ -30,11 +30,15 @@ public class GameManager : MonoBehaviour {
     }
 
     public void pauseGame() {
-        pauseEvent.Invoke();
+        AudioPeer.instance.pauseSong();
+        Time.timeScale = 0;
+        // pauseEvent.Invoke();
     }
 
     public void resumeGame() {
-        resumeEvent.Invoke();
+        Time.timeScale = 1;
+        AudioPeer.instance.resumeSong();
+        //resumeEvent.Invoke();
     }
 
     public void gameOver() {
