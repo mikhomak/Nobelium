@@ -2,22 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PSAutoDestroy : MonoBehaviour
-{
+public class PSAutoDestroy : MonoBehaviour {
     private ParticleSystem ps;
 
 
-    public void Start()
-    {
+    public void Start() {
         ps = GetComponent<ParticleSystem>();
     }
 
-    public void Update()
-    {
-        if (ps)
-        {
-            if (!ps.IsAlive())
-            {
+    public void Update() {
+        if (ps) {
+            if (!ps.IsAlive()) {
                 Destroy(gameObject);
             }
         }

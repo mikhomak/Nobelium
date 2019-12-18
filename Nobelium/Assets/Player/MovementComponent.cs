@@ -5,8 +5,13 @@ public class MovementComponent : IComponent {
     private Rigidbody2D rb2d;
     private bool activated = true;
 
-    public float getSpeed() { return speed; }
-    public void setSpeed(float speed) { this.speed = speed; }
+    public float getSpeed() {
+        return speed;
+    }
+
+    public void setSpeed(float speed) {
+        this.speed = speed;
+    }
 
 
     public MovementComponent(Rigidbody2D rb2d) {
@@ -17,7 +22,8 @@ public class MovementComponent : IComponent {
     public void movement(float horInput, float verInput) {
         if (activated) {
             rb2d.velocity = new Vector2(horInput, verInput) * speed;
-        } else {
+        }
+        else {
             rb2d.velocity = new Vector2(0, 0);
         }
     }

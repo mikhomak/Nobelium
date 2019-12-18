@@ -26,7 +26,6 @@ public class Enemy : MonoBehaviour, IEnemy {
         setStats();
         phases.ForEach(e => e.calculateHealthEntrance(health));
         phases = phases.OrderBy(e => e.getEnterHealth()).ToList();
-        Debug.Log(phases);
     }
 
     private void FixedUpdate() {
