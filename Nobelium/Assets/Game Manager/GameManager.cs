@@ -48,11 +48,5 @@ public class GameManager : MonoBehaviour {
     public void gameOver() {
     }
 
-    private void findPlayer() {
-        player = GameObject.FindGameObjectWithTag("Player");
-    }
 
-    public Vector3 getPlayerPos(GameObject player) {
-        return new Vector3(player.transform.position.x, player.transform.position.y, 0);
-    }
 }
