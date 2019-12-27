@@ -28,11 +28,11 @@ public class AudioPeer : MonoBehaviour {
     }
 
     public static float getSample(int i) {
-        return float.IsNaN(samples[i]) ? 0: samples[i];
+        return float.IsNaN(samples[i]) ? 0 : samples[i];
     }
     
     public static float getAudioBandBuffer(int i) {
-        return float.IsNaN(audioBandBuffer[i]) ? 0 : samples[i];
+        return float.IsNaN(audioBandBuffer[i]) ? 0 : audioBandBuffer[i];
     }
 
     private void Start() {
