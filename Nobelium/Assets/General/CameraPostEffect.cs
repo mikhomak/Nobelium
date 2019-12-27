@@ -24,12 +24,13 @@ public class CameraPostEffect : MonoBehaviour {
 
     void OnEnable() {
         originalPos = camTransform.localPosition;
+        originalPos.y = 0;
     }
 
     void Update() {
         float shakeAmount =
             CommonMethods.getValueInRange(AudioPeer.getAudioBandBuffer(0), minShakeAmount, maxShakeAmount);
-        camTransform.localPosition = originalPos + Random.insideUnitSphere * shakeAmount;
+        camTransform.localPosition = originalPos + new Vector3(Random.insideUnitSphere.x, 0,0)* shakeAmount;
 
         shakeDuration -= Time.deltaTime * decreaseFactor;
     }

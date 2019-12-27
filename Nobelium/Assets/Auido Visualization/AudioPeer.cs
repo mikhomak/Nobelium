@@ -25,17 +25,9 @@ public class AudioPeer : MonoBehaviour {
     }
 
     public static float getSample(int i) {
-        return samples[i];
+        return float.IsNaN(samples[i]) ? 0: samples[i];
     }
-
-    public static float getFreqBands(int i) {
-        return freqBand[i];
-    }
-
-    public static float getBandBuffer(int i) {
-        return bandBuffer[i];
-    }
-
+    
     public static float getAudioBandBuffer(int i) {
         return audioBandBuffer[i];
     }
