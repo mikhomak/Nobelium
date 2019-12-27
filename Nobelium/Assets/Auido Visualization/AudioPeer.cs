@@ -6,12 +6,15 @@ using UnityEngine;
 
 [RequireComponent(typeof(AudioSource))]
 public class AudioPeer : MonoBehaviour {
-    [SerializeField] private static float[] audioBand = new float[8];
-    [SerializeField] private static float[] audioBandBuffer = new float[8];
-    [SerializeField] private static float[] freqBandHighest = new float[8];
-    [SerializeField] private static float[] freqBand = new float[8];
-    [SerializeField] private static float[] bandBuffer = new float[8];
-    [SerializeField] private static float[] bufferDescrease = new float[8];
+    [SerializeField] private static int maxBands = 8;
+    [SerializeField] private static float BUFFER_INCREASE = 0.005f;
+    [SerializeField] private static float BUFFER_DESCREASE = 1.2f;
+    [SerializeField] private static float[] audioBand = new float[maxBands];
+    [SerializeField] private static float[] audioBandBuffer = new float[maxBands];
+    [SerializeField] private static float[] freqBandHighest = new float[maxBands];
+    [SerializeField] private static float[] freqBand = new float[maxBands];
+    [SerializeField] private static float[] bandBuffer = new float[maxBands];
+    [SerializeField] private static float[] bufferDescrease = new float[maxBands];
     [SerializeField] private static float[] samples = new float[512];
     private AudioSource audioSource;
     public static AudioPeer instance;
@@ -29,7 +32,7 @@ public class AudioPeer : MonoBehaviour {
     }
     
     public static float getAudioBandBuffer(int i) {
-        return audioBandBuffer[i];
+        return float.IsNaN(audioBandBuffer[i]) ? 0 : samples[i];
     }
 
     private void Start() {
@@ -49,7 +52,7 @@ public class AudioPeer : MonoBehaviour {
 
     private void updateFrequencyBrands() {
         int count = 0;
-        for (int i = 0; i < 8; i++) {
+        for (int i = 0; i < maxBands; i++) {
             float average = 0;
             int sampleCount = (int) Mathf.Pow(2, i) * 2;
             if (i == 7)
@@ -65,22 +68,22 @@ public class AudioPeer : MonoBehaviour {
     }
 
     private void updateBandBuffer() {
-        for (int i = 0; i < 8; i++) {
+        for (int i = 0; i < maxBands; i++) {
             if (freqBand[i] > bandBuffer[i]) {
                 bandBuffer[i] = freqBand[i];
-                bufferDescrease[i] = 0.005f;
+                bufferDescrease[i] = BUFFER_INCREASE;
             }
 
             if (freqBand[i] < bandBuffer[i]) {
                 bandBuffer[i] -= bufferDescrease[i];
-                bufferDescrease[i] *= 1.2f;
+                bufferDescrease[i] *= BUFFER_DESCREASE;
             }
         }
     }
 
 
     private void updateAudioBands() {
-        for (int i = 0; i < 8; i++) {
+        for (int i = 0; i < maxBands; i++) {
             if (freqBand[i] > freqBandHighest[i]) {
                 freqBandHighest[i] = freqBand[i];
             }
